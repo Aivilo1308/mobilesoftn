@@ -31,7 +31,7 @@ MEDIA_URL = "/media/"
 SECRET_KEY = 'django-insecure-1gkv@mwlo2=^-0l=$ud_((qy6+gza(7sbb7ns%cahsu_-p4cj#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://mobilesoftn.herokuapp.com/','127.0.0.1']
 
@@ -87,16 +87,16 @@ WSGI_APPLICATION = 'mobilesoftn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     },
-# }
-
 DATABASES = {
-    'default': dj_database_url.config(),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(),
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
