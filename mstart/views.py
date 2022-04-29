@@ -7,19 +7,18 @@ from .models import ReqUser, Traduc, Video
 
 
 def index(request):    
-    # return HttpResponse ("JE SUIS LA")
 
-#     context={}
-#     videos=Video.objects.all()
+    context={}
+    videos=Video.objects.all()
 #     traduc_Main = Traduc.objects.filter(formulaire__iexact =  'Main.html')
 #     traduc_Index_Entete = Traduc.objects.filter(formulaire__iexact =  'Index.html-Entete')
 
 #     # print(list(traduc))
 
-#     context['videos']=videos
+    context['videos']=videos
 #     context['traduc_Main']=traduc_Main
 #     context['traduc_Index_Entete']=traduc_Index_Entete
-    return render(request,'index.html')
+    return render(request,'index.html', context)
 
 
 def blogList(request):    
