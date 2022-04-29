@@ -369,7 +369,7 @@
                 </div>
               </div>
             </div>
-        </div>        
+          </div>        
 
           <script>
             $(document).on("submit", "#form1", function (e) {
@@ -1028,42 +1028,42 @@
                     </div>
                 </div>        
         
-                  <script>
-                    $(document).on("submit", "#form2", function (e) {
-                      e.preventDefault();
-              
-                      if ($("#name2").val() == "") {
-                        $("#msgPasHre2").text(
-                          "Il faut renseigner le nom !"
-                        );
-                        $("#msgPasHre2").focus();
-                      } else {
+                <script>
+                  $(document).on("submit", "#form2", function (e) {
+                    e.preventDefault();
+            
+                    if ($("#name2").val() == "") {
+                      $("#msgPasHre2").text(
+                        "Il faut renseigner le nom !"
+                      );
+                      $("#msgPasHre2").focus();
+                    } else {
 
-                        $.ajax({
-                          type: "POST",
-                          url: "requete1/",
-                          data: {
-                            nom: $("#name2").val(),
-                            email: $("#email2").val(),
-                            whatsapp: $("#whatsapp2").val(),
-                            facebook: $("#facebook2").val(),
-                            activite: $("#activite2").val(),
-                            siteweb : $("#basic-url2").val(),
-                            besoin: $("#besoin2").val(),
-                            objetreq : "Besoin d'un site web",
-                            csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
-                          },
-                          success: function (response) {
-                            $("#msgPasHre2").text(response);
-                            $("#reset-form2").click();
-                          },
-                          error: function () {
-                            $("#msgPasHre2").text("Attention. Il y a une erreur quelque part!");
-                          },
-                        });
-                      }
-                    });
-                  </script>  
+                      $.ajax({
+                        type: "POST",
+                        url: "requete1/",
+                        data: {
+                          nom: $("#name2").val(),
+                          email: $("#email2").val(),
+                          whatsapp: $("#whatsapp2").val(),
+                          facebook: $("#facebook2").val(),
+                          activite: $("#activite2").val(),
+                          siteweb : $("#basic-url2").val(),
+                          besoin: $("#besoin2").val(),
+                          objetreq : "Besoin d'un site web",
+                          csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                        },
+                        success: function (response) {
+                          $("#msgPasHre2").text(response);
+                          $("#reset-form2").click();
+                        },
+                        error: function () {
+                          $("#msgPasHre2").text("Attention. Il y a une erreur quelque part!");
+                        },
+                      });
+                    }
+                  });
+                </script>  
                   
                 <!-- Fenetre modal Mobile Application-->
 
@@ -1308,7 +1308,7 @@
                           </p>
 
                           <div style="height:50px;"></div>
-                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">BESOIN D'OPTIMISER MON SITE WEB!</a>
+                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">OPTIMIZER MON SITE WEB!</a>
 
                         {% else %}
                           <h2 class="mb-4 mt-4"><em>SEO</em> Optimization of websites </h2>
@@ -1364,7 +1364,7 @@
                         </p>
 
                         <div style="height:50px;"></div>
-                        <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">I NEED TO OPTIMIZE MY WEBSITE</a>
+                        <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">OPTIMIZE MY WEBSITE</a>
                         <!-- <a href="#" class="main-button-slider">DEMANDER UN DEVIS GRATUIT</a> -->
                       {% endif %}                    
                   </div>
@@ -1677,7 +1677,7 @@
 
                         <div style="height:50px;"></div>
                         <div class="text-center">
-                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">JE SUIS INTERESSÉ, CONTACTEZ MOI.</a>
+                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">JE SUIS INTERESSÉ.</a>
                         </div>
                         <div style="height:50px;"></div>
 
@@ -1821,7 +1821,7 @@
 
                         <div style="height:50px;"></div>
                         <div class="text-center">
-                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">I'M INTERESTED IN WEB APPS.</a>
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">I'M INTERESTED.</a>
                         </div>
                         <div style="height:50px;"></div>
 
@@ -1853,13 +1853,13 @@
                         <div style="height:30px;"></div>
 
                         <div class="text-center">
-                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">JE VEUX AMELIORER MON MARKETING DIGITAL</a>
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">BOSSTER MON WEB MARKETING</a>
                         </div>
                     {% else %}
                         <div style="height:30px;"></div>
 
                         <div class="text-center">
-                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">HELP ME TO BOOST MY WEB MARKETING STRATEGY</a>
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">BOOST MY WEB MARKETING STRATEGY</a>
                         </div>
                     {% endif %}
                   
