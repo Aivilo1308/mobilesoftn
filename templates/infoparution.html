@@ -1,0 +1,164 @@
+{% load i18n %}
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollToFixed/1.0.8/jquery-scrolltofixed-min.js"></script>
+
+    {% if LANGUAGE_CODE == 'en' %}
+        <title>{{designationEn}}</title>
+    {% else %}
+        <title>{{designationFr}}</title>
+    {% endif %}
+  </head>
+
+  <body>
+    
+    <!-- Fenetre modal Accompagnement digital de jeunes entreprises-->
+
+    <!-- <div class="modal fade" id="infoprochaineparution1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-infoprochaineparution1" aria-hidden="false"> -->
+<div class="" id="infoprochaineparution1">
+    <div class="col-md-4 col-sm-8 mx-auto">
+        <div class="card p-3 mt-5">
+                <a style="margin-left:95%;" type="button" href="{% url 'accueil' %}#infoparution1">
+                <span aria-hidden="true" class="h2">&times;</span>
+                </a>
+
+                {% if LANGUAGE_CODE == 'en' %}
+                    <h5 class="text-center" id="exampleModalLabel-infoprochaineparution1">{{designationEn}}</h5>
+                {% else %}
+                    <h5 class="text-center" id="exampleModalLabel-infoprochaineparution1">{{designationFr}}</h5>                                    
+                {% endif %}
+
+                <form id="#form-infoprochaineparution1" method ="POST" action="">
+                    {% csrf_token %}
+                    <div class="row">
+                        {% if LANGUAGE_CODE == 'en' %}
+                            <p class="ml-3 mr-2 mb-2">Please fill in the information below first:</p>
+                            <small class="form-text text-danger text-justify ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic;">All
+                                your data will remain strictly confidential and will not be distributed without your permission.
+                                They will only allow us to get in touch with you and to better adapt our offer to your situation!
+                            </small>                                
+                        {% else %}
+                            <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                            <small class="form-text text-danger text-justify ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic;">Toutes 
+                                vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                            </small>    
+                        {% endif %}
+
+                        <div class="col-25 w-25 ml-3 mr-2">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <label for="name-infoprochaineparution1">Name/Designation </label>
+                            {% else %}
+                                <label for="name-infoprochaineparution1">Nom/raison sociale </label>
+                            {% endif %}
+                        </div>
+                        <div class="col-75">
+                            <input style="width:100%;" type="text" id="name-infoprochaineparution1" name="name-infoprochaineparution1" placeholder="Votre nom ou raison sociale.." required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                            <label for="email-infoprochaineparution1">email</label>
+                        </div>
+                        <div class="col-75">
+                            <input style="width:100%;" type="email" id="email-infoprochaineparution1" name="email-infoprochaineparution1" placeholder="Email.." required>
+                        </div>
+                    </div> 
+
+                    <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                            <label for="whatsapp-infoprochaineparution1">WhatsApp/Tél.</label>
+                        </div>
+                        <div class="col-75">
+                            <input style="width:100%;" type="text" id="whatsapp-infoprochaineparution1" name="whatsapp-infoprochaineparution1" placeholder="WhatsApp..">
+                        </div>
+                    </div> 
+
+                    <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                            <label for="facebook-infoprochaineparution1">Facebook</label>
+                        </div>
+                        <div class="col-75">
+                            <input style="width:100%;" type="text" id="facebook-infoprochaineparution1" name="facebook-infoprochaineparution1" placeholder="Facebook..">
+                        </div>
+                    </div> 
+                        
+                    <div class="row">
+                        <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <label class="form-label" for="activite-infoprochaineparution1">Your business area</label>
+                            {% else %}
+                                <label class="form-label" for="activite-infoprochaineparution1">Votre activité</label>
+                            {% endif %}
+                            <textarea id="activite-infoprochaineparution1" name="activite-infoprochaineparution1" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                        </div>                      
+                    </div> 
+
+                    <div class="row">
+                        <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                            {% if LANGUAGE_CODE == 'en' %}
+                                <label class="form-label" for="besoin-infoprochaineparution1">Specify your need</label>
+                            {% else %}
+                                <label class="form-label" for="besoin-infoprochaineparution1">Précisez votre besoin</label>
+                            {% endif %}
+
+                            <textarea id="besoin-infoprochaineparution1" name="besoin-infoprochaineparution1" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                        </div>                      
+                    </div> 
+
+                    <div class="row">                                 
+                        <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                            <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'en' %}
+                                    <label class="form-label" for="basic-url-infoprochaineparution1">Your actual website or social network page</label>
+                                {% else %}
+                                    <label class="form-label" for="basic-url-infoprochaineparution1">Votre site web ou page de réseau social actuel</label>
+                                {% endif %}      
+                                <input id="basic-url-infoprochaineparution1" style="width:100%;" type="text" name="basic-url-infoprochaineparution1" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                            </div>                      
+                        </div>
+                    </div>
+
+                    <small class="form-text text-danger text-justify ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic;">
+                        {% if LANGUAGE_CODE == 'en' %}
+                            We will contact you very shortly either by email or WhatsApp! Thanks for trusting us!
+                        {% else %}
+                            Nous prendrons contact avec vous ans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                        {% endif %}
+                    </small>
+
+                    <div class="mt-3">
+                        {% if LANGUAGE_CODE == 'en' %}
+                            <a class="btn btn-secondary"  href="{% url 'accueil' %}#infoparution1">Close</a>
+                            <!-- <input id="reset-form-infoprochaineparution1" type="reset" style="display: none;" value="Reset"> -->
+                            <button type="submit" class="btn btn-primary">Send</button>
+                            <p id="msgPasHre-infoprochaineparution1">{{msgEn}}</p>
+                        {% else %}
+                            <a class="btn btn-secondary"  href="{% url 'accueil' %}#infoparution1">Fermer</a>
+                            <!-- <input id="reset-form-infoprochaineparution1" type="reset" style="display: none;" value="Reset"> -->
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            <p id="msgPasHre-infoprochaineparution1">{{msgFr}}</p>
+                        {% endif %}
+                    </div>              
+                </form> 
+        </div>
+    </div>
+</div>        
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Fin Bootstrap Bundle with Popper -->
+  </body>
+</html>

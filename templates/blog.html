@@ -1,0 +1,310 @@
+{% extends 'main.html' %}
+{% load i18n %}
+{% block titre %}    
+    {% if LANGUAGE_CODE == 'en' %}
+      <title>Digital business cards - Videos for sales - Ecommerce websites | Mobilesoft'n</title>
+    {% else %}
+      <title>Cartes de visite digitales - Videos commerciales - Sites de ecommerce | Mobilesoft'n</title>
+    {% endif %}         
+{% endblock %}
+
+
+{% block contenuprincipal %}
+
+    {% load static %}
+
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                        <!-- data-scroll-reveal="enter left move 30px over 0.6s after 0.4s" -->
+                        {% if LANGUAGE_CODE == 'fr' %}
+                            <h1>Découvrez <em>les derniers articles</em> écrits par nos spécialistes. </h1>
+                            <p style="font-size:1.4em;">Ce blog présente les nouveautés de Mobilesoft'n ainsi que les témoignages de
+                                de spécialistes, les dernières évolutions technologiques utiles aux entreprises et aux usagers en particulier.<br><br>
+                            </p>
+  
+                        {% else %}
+                            <h1>Discover <em>the latest articles</em> written by our specialists. </h1>
+                            <p style="font-size:1.4em;">This blog presents the news of Mobilesoft'n as well as the testimonials of
+                                specialists, the latest technological developments useful to companies and individual users.<br><br>
+                            </p>
+                        {% endif %}         
+                                              
+                        <!-- <p style="font-size:1.4em;">A Mobilesoft'n nous nous engageons à ce que votre business ait une présence dynamique sur le net. Ce qui passe par <a href="#"> un site web dynamique et responsive </a>,
+                           une présence <a href="#">efficace sur les différents sociaux</a>, et/ou une <a href="#">application mobile à valeur ajoutée</a>, le tout mixé dans une stratégie de marketing digital pilotée par le <a href="#">Data driven.</a></p> 
+                        
+                        <div style="height:30px;"></div>
+                        <a href="#about" class="main-button-slider">MAQUETTE ET DEVIS GRATUITS</a> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <section class="section mt-5">
+           <div class="container">
+              <div class="blog-row row">					
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                      <div class="features-item">
+                          <figure>
+                              <img src="{% static 'images/boutique-facebook.jpg' %}" alt="" style="width:100%; height:80%">
+                          </figure>
+
+                          <div class="blog-detail" style="text-align: justify;">
+                              <small style="color:black;">njb | 21 Fév. 2022</small>
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <h4 style="text-align: center;">Créez une boutique Facebook pour développer votre business</h4>                                
+                                <p>En tant qu’entreprise, se démarquer sur les réseaux sociaux est un vrai challenge ! <br> Pour les magasins, créer 
+                                    une boutique Facebook est un levier à ne pas négliger dans sa communication. Avec ses nombreuses fonctionnalités 
+                                    et sa gratuité, il est désormais très abordable de booster sa visibilité et ses ventes. <br><br>
+
+                                    <span style="font-weight: bold;">Miser sur le digital</span>  <br><br>
+
+                                    Avoir une place en ligne pour les magasins est essentiel pour leur développement. En 2020, le commerce mobile 
+                                    représente 45% de toutes les activités du e-commerce ! En passant par la création d’une boutique Facebook, vous 
+                                    augmentez vos chances de permettre à vos clients de commander facilement vos produits. Par ailleurs, vous pouvez 
+                                    communiquer à tout moment sur vos produits ! En ajoutant des catégories, vous pouvez permettre à votre clientèle 
+                                    de s’y retrouver facilement dans votre catalogue. Le plus ? Mettez en avant vos offres promotionnelles ! 
+                                    Et surtout, taguez vos produits sur vos posts. Simple et efficace, vos abonnés n’auront qu’à cliquer sur 
+                                    l’indication pour en trouver la fiche complète ! <br><br>
+
+                                    <span style="font-weight: bold;">Web to store : comment attirer vos clients dans votre boutique ?</span> <br><br>
+                                        Créer une boutique Facebook, c’est aussi un moyen d’attirer votre clientèle directement dans votre 
+                                        boutique physique. Les clients les plus réticents à l’achat sur Internet auront plus de facilités à 
+                                        venir vous rendre visite. Aujourd’hui, c’est près de 91% des consommateurs qui font d’abord une 
+                                        recherche en ligne avant de se rendre en magasin. En créant un catalogue visible depuis votre page, 
+                                        vous préparez toutes ces personnes à effectuer leurs achats. Grâce à ce biais, il vous sera facile de 
+                                        toucher une nouvelle cible, d’autant plus si vous faites quelques posts sponsorisés pour promouvoir 
+                                        vos produits ! <br><br>
+
+                                        <span style="font-weight: bold;">A Mobilesoft'n nous pouvons vous aider à monter votre boutique virtuel facebook.</span> <br><br>
+                                        <a href="https://wa.me/2250103262662">Contactez nous et laissons nous un message.</a> 
+                                </p>
+                                    
+                              {% else %}
+                                    <h4 style="text-align: center;">Create a Facebook shop to develop your business</h4>                                
+                                    <p>As a company, standing out on social networks is a real challenge! <br> For stores, create
+                                        a Facebook shop is a lever not to be overlooked in its communication. With its many features
+                                        and its free, it is now very affordable to boost its visibility and sales. <br><br>
+    
+                                        <span style="font-weight: bold;">Go digital !</span>  <br><br>
+    
+                                        Having a place online for stores is essential for their development. In 2020, mobile commerce
+                                        represents 45% of all e-commerce activities! By creating a Facebook shop, you
+                                        increase your chances of making it easy for your customers to order your products. Furthermore, you can
+                                        communicate at any time about your products! By adding categories, you can allow your customers
+                                        find it easily in your catalog. Most ? Highlight your promotional offers!
+                                        And above all, tag your products on your posts. Simple and effective, your subscribers will only have to click on
+                                        the indication to find the complete sheet! <br><br>    
+                                        <span style="font-weight: bold;">Web to store: how to attract your customers to your store?</span> <br><br>
+                                        Creating a Facebook shop is also a way to attract your customers directly to your
+                                        physical store. Customers who are the most reluctant to buy on the Internet will find it easier to
+                                        come to visit you. Today, nearly 91% of consumers first make a
+                                        research online before going to the store. By creating a catalog visible from your page,
+                                        you prepare all these people to make their purchases. Thanks to this bias, it will be easy for you to
+                                        reach a new target, especially if you make a few sponsored posts to promote
+                                        your products ! <br><br>
+        
+                                        <span style="font-weight: bold;">At Mobilesoft'n we can help you set up your facebook virtual store.</span> <br><br>
+                                        <a href="https://wa.me/2250103262662">Contact us and leave us a message.</a>         
+                                    </p>
+                                {% endif %}
+                              <div class="link">
+                                  <!-- <a href="#" style="color:blue;">Lire plus </a><i class="fas fa-long-arrow-alt-right"></i> -->
+                              </div>
+                          </div>        					        					
+                      </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                      <div class="features-item">
+                          <figure>
+                              <img src="{% static 'images/Vcard.png' %}" alt="" style="width:100%; height:80%">
+                          </figure>
+
+                          <div class="blog-detail" style="text-align: justify;">
+                              <small style="color:black;">njb | 21 Fév. 2022</small>
+                              
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <h4 style="text-align: center;">Carte de visite virtuelle : Quels avantages et quels outils ?</h4>
+                                <p> Une carte de visite virtuelle présente les mêmes fonctions que la carte de visite classique. Aussi appelée vCard, 
+                                    de son nom anglais VirtualCard, elle est utilisée pour les échanges numériques. C’est un moyen de donner une 
+                                    bonne première impression lors des envois de mails, de réunions virtuelles, etc. <br> <br>
+
+                                    En plus de la visibilité qu’elle offre, elle permet aux interlocuteurs de recontacter celui qui les a interpelés. 
+                                    Les coordonnées arrivées à destination ne risquent pas d’être perdues. Elles peuvent être facilement recherchées 
+                                    et consultées à tout moment. <br> <br>
+                                    
+                                    La carte de visite virtuelle contient généralement le nom, la fonction, l’entreprise, l’adresse, et la photo de 
+                                    son propriétaire. Les différents moyens de le contacter, comme son site web, ses profils sur les réseaux sociaux 
+                                    peuvent aussi y figurer. Son numéro de téléphone et son e-mail y sont aussi indiqués. Les données personnelles 
+                                    et professionnelles peuvent ainsi être accessibles depuis un support au petit format. <br><br>
+                                    
+                                    L’un des avantages de la carte de visite virtuelle est qu’elle est économique. Elle ne requiert aucune impression, 
+                                    et peut s’adapter à plusieurs styles. Les possibilités de personnalisation sont d’ailleurs nombreuses. 
+                                    Les utilisateurs peuvent jouer sur la police de caractère, le design, les couleurs, etc. <br><br>
+                                    
+                                    En cas de reconversion professionnelle, la mise à jour des coordonnées professionnelles est plus simple avec 
+                                    la carte digitale. Seuls quelques ajustements sont indispensables pour qu’elle soit actualisée. Il n’est plus 
+                                    nécessaire de commander de nouvelles cartes, et de se conformer au nombre minimum à imprimer. De ce fait, 
+                                    l’utilisation de carte de visite digitale permet de réduire de l’impact écologique d’une activité économique. <br><br>
+                                    </p> <br>
+
+                                    <span style="font-weight: bold;">A Mobilesoft'n nous pouvons vous concevoir vos cartes de visite électroniques.</span> <br><br>
+                                    <a href="https://wa.me/2250103262662">Contactez nous et laissons nous un message.</a> 
+                              
+                              {% else %}
+                                    <h4 style="text-align: center;">Virtual business card: What advantages and what tools?</h4>
+                                    <p> A virtual business card has the same functions as the classic business card. Also called vCard,
+                                        from its English name VirtualCard, it is used for digital exchanges. It's a way to give a
+                                        good first impression when sending emails, virtual meetings, etc. <br><br>
+
+                                        In addition to the visibility it offers, it allows interlocutors to recontact the person who called them.
+                                        The coordinates arrived at destination are not likely to be lost. They can be easily searched
+                                        and consulted at any time. <br><br>
+                                        
+                                        The virtual business card generally contains the name, function, company, address, and photo of
+                                        his owner. The different means of contacting him, such as his website, his profiles on social networks
+                                        may also be included. His phone number and e-mail address are also listed. Personal data
+                                        and professional can thus be accessible from a medium in small format. <br><br>
+                                        
+                                        One of the advantages of the virtual business card is that it is economical. It requires no printing,
+                                        and can adapt to several styles. There are also plenty of customization options.
+                                        Users can play around with the font, design, colors, etc. <br><br>
+                                        
+                                        In the event of professional retraining, updating professional contact details is easier with
+                                        the digital business card. Only a few adjustments are necessary for it to be updated. He is not anymore
+                                        necessary to order new cards, and to comply with the minimum number to be printed. Thereby,
+                                        the use of digital business cards makes it possible to reduce the ecological impact of an economic activity. <br><br>
+                                        </p> <br>
+
+                                        <span style="font-weight: bold;">At Mobilesoft'n we can help you set up your facebook virtual store.</span> <br><br>
+                                        <a href="https://wa.me/2250103262662">Contact us and leave us a message.</a>         
+                                  {% endif %}
+
+                              <div class="link">
+                                  <!-- <a href="#" style="color:blue;">Lire plus </a><i class="fas fa-long-arrow-alt-right"></i> -->
+                              </div>
+                          </div>        					        					
+                      </div>
+                  </div>
+
+                  <!--  -->
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                      <div class="features-item">
+                          <figure>
+                              <img src="{% static 'images/filmervideo.jpg' %}" alt="" style="width:100%; height:80%">
+                          </figure>
+
+                          <div class="blog-detail" style="text-align: justify;">
+                              <small style="color:black;">njb | 21 Fév. 2022</small>
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <h4 style="text-align: center;">Pourquoi faire des vidéos commerciales ?</h4>
+                                <p>La vidéo est présente partout : publicités, sites web, réseaux sociaux… si bien que 
+                                    les entreprises se l’approprient et s’en servent comme un véritable outil marketing 
+                                    afin de se faire connaître et pour promouvoir leur activité. <br><br>
+
+                                    Le champ d’application est large : vidéo de présentation de l’entreprise, interview 
+                                    vidéo d’un collaborateur, vidéo de formation… Les vidéos en entreprise étaient 
+                                    traditionnellement créées par des agences, mais de plus en plus, les entreprises 
+                                    réalisent leur contenu en interne afin de gagner en agilité et pour gagner en 
+                                    autonomie. Nous avons identifié 5 bonnes raisons de vous lancer ! <br><br>
+                                    
+                                    <span style="font-weight: bold;">La vidéo est un outil efficace pour communiquer en interne</span> <br><br>
+                                    Boostez votre communication interne en créant des vidéos avec vos collaborateurs. 
+                                    Au revoir les longs textes ennuyeux à lire, faites place aux vidéos dynamiques qui 
+                                    captent l’attention et font passer le message efficacement. Annonces officielles de 
+                                    l’entreprise, actualités, bilans de fin d’année, annonce des vœux du CEO et plus encore,
+                                    le format vidéo se prête bien à tout type de message que l’on veut partager avec ses 
+                                    collaborateurs. <br><br>
+                                    
+                                    <span style="font-weight: bold;">La vidéo, reine des contenus pour la communication externe !</span> <br><br>
+
+                                    La vidéo d’entreprise est devenue inévitable pour construire une identité forte 
+                                    auprès de son audience sur les réseaux : client, prospect, partenaire et futurs 
+                                    collaborateurs. C’est un outil SEO redoutable : la vidéo vous donne 50 fois plus de 
+                                    chances d’apparaître sur Google par rapport à une page sans vidéo.
+                                    
+                                    Et c’est un contenu indispensable pour votre site internet d’entreprise : 
+                                    88% des visiteurs restent plus longtemps sur un site avec des vidéos ! 
+                                    Bref la vidéo vous permet de gagner en visibilité et de booster engagement et 
+                                    conversion. <br><br>
+                                    
+                                    <span style="font-weight: bold;">La vidéo est un format engageant de formation et d’information</span> <br><br>
+                                    La vidéo en entreprise est le format idéal pour former vos collaborateurs en interne : 
+                                    en partageant les informations de façon dynamique, vous encouragez les questions et 
+                                    augmentez la rétention !</p><br>
+
+                                    <span style="font-weight: bold;">A Mobilesoft'n nous pouvons vous concevoir vous écrire un scénario, faire les montages vidéos et faire les publications pour vous.</span> <br><br>
+                                    <a href="https://wa.me/2250103262662">Contactez nous et laissons nous un message.</a>                                 
+                                {% else %}
+                                    <h4 style="text-align: center;">Why make commercial videos?</h4>
+                                    <p>Video is present everywhere: advertisements, websites, social networks… so much so that
+                                        companies appropriate it and use it as a real marketing tool
+                                        to make themselves known and to promote their activity. <br><br>
+
+                                    The field of application is wide: video presentation of the company, interview
+                                    video of an employee, training video… The videos in the company were
+                                    traditionally created by agencies, but increasingly, companies
+                                    produce their content in-house in order to gain agility and to gain in
+                                    autonomy. We have identified 5 good reasons to get started! <br><br>
+                                    
+                                    <span style="font-weight: bold;">Video is an effective tool for internal communication</span> <br><br>
+                                    Boost your internal communication by creating videos with your collaborators.
+                                    Goodbye long boring texts to read, make way for dynamic videos that
+                                    capture attention and get the message across effectively. Official announcements from
+                                    the company, news, year-end reviews, announcement of the CEO's wishes and more,
+                                    the video format lends itself well to any type of message that you want to share with your
+                                    collaborators. <br><br>
+                                    
+                                    <span style="font-weight: bold;">Video, queen of content for external communication!</span> <br><br>
+
+                                    Corporate video has become inevitable to build a strong identity
+                                    with its audience on the networks: customer, prospect, partner and future
+                                    collaborators. It's a formidable SEO tool: video gives you 50 times more
+                                    chances of appearing on Google compared to a page without video.
+                                    
+                                    And it is essential content for your business website:
+                                    88% of visitors stay longer on a site with videos!
+                                    In short, video allows you to gain visibility and boost engagement and
+                                    conversion. <br><br>
+                                    
+                                    <span style="font-weight: bold;">Video is an engaging training and information format</span> <br><br>
+                                    Corporate video is the ideal format for training your employees internally:
+                                    By sharing information dynamically, you encourage questions and
+                                    increase retention!
+                                    </p><br>
+
+                                    <span style="font-weight: bold;">At Mobilesoft'n we can help you set up your facebook virtual store.</span> <br><br>
+                                    <a href="https://wa.me/2250103262662">Contact us and leave us a message.</a>         
+                                {% endif %}
+
+                              <div class="link">
+                                  <!-- <a href="#" style="color:blue;">Lire plus </a><i class="fas fa-long-arrow-alt-right"></i> -->
+                              </div>
+                          </div>        					        					
+                      </div>
+                  </div>
+
+                  <!-- <div class="form-group col-sm-12" style="display: flex; justify-content:center">
+                      <a class="mr-4" style="color:blue; font-size: 1.2em; font-style: italic;" id="btnPostPage1" href="#">1</a>						
+                      <a class="mr-4" style="color:blue; font-size: 1.2em; font-style: italic;" id="btnPostPage2" href="#">2</a>
+                      <a class="mr-4" style="color:blue; font-size: 1.2em; font-style: italic;" id="btnPostPage3" href="#">3</a>
+                      <a class="mr-4" style="color:blue; font-size: 1.2em; font-style: italic;" id="btnPostPage4" href="#">4</a>
+                      <a class="mr-4" style="color:blue; font-size: 1.2em; font-style: italic;" id="btnPostPage5" href="#">5</a>
+                  </div> -->
+              </div>
+           </div>
+       </section>
+
+{% endblock %}

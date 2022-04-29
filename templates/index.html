@@ -1,0 +1,2381 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load embed_video_tags %}
+
+{% block titre %}    
+    {% if LANGUAGE_CODE == 'en' %}
+      <title>We digitalize your ideas. Dynamic Websites and Mobile app rapid development | Mobilesoft'n </title>
+    {% else %}
+      <title>Nous digitalisons vos idées. Développement rapide de Sites web dynamiques et d'Applications mobile | Mobilesoft'n</title>
+    {% endif %}         
+{% endblock %}
+
+{% block contenuprincipal %}
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area animatedNjb bounceInLeft" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <!-- data-scroll-reveal="enter left move 30px over 0.6s after 0.4s" -->
+                                               
+                          {% if LANGUAGE_CODE == 'en' %}
+                            <h1>We digitalize your business ideas into <em> WEB APPLICATIONS </em></h1>
+                            <p style="font-size:1.4em;">Mobilesoft'n transform your ideas into web or mobile applications. This involve 
+                              a sound, dynamic and responsive website capable to convert the web visitor into a satisfied customer. 
+                              We make sure that you have an effective presence on the various social networks, always driven by the 
+                              Data analysis.<br><br>
+                            </p>
+                          {% else %}
+                            <h1>Nous transformons vos idées en <em>APPLICATIONS WEB</em></h1>
+                            <p style="font-size:1.4em;">A Mobilesoft'n nous transformons vos idées en application Web ou en applications mobile. 
+                              Ce qui s'articulera autour d' un site web dynamique, 
+                              responsive et capable de conduire le visiteur à une décision d'achat.
+                              Et une présence efficace sur les différents réseaux sociaux le tout guidé 
+                              par Data driven.
+                              <br><br>
+                            </p> 
+                          {% endif %}                                                                          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ***** Header Text End ***** -->
+    </div>
+    
+    <!-- ***** Welcome Area End ***** -->
+    <div style="height:100px;"></div>
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section mt-3 mb-3" >
+        <div class="container">
+
+          <div class="row mb-5" id="nouveaute">
+              <!-- <div class="col-sm-12 col-md_12 mb-5" style="height: 400px;;"> -->
+                  <div class="col-md-6 col-sm-12">
+                      <h3 class="mb-1">
+                        {% if LANGUAGE_CODE == 'en' %}
+                          Introduction - video <em style="font-weight: bold; color:#fba70b;">Mobilesoft'n</em>
+                        {% else %}
+                          Vidéo introduction de <em style="font-weight: bold; color:#fba70b;">Mobilesoft'n</em>
+                        {% endif %}
+                      </h3><br><br>
+                        {% if videos %}
+                          {% for item in videos %}
+                            {% video item.url 'tiny' %} <br><br>                          
+                              <!-- {{ item.title }} -->
+                          {% endfor %}
+                        {% else %}
+                          {% if LANGUAGE_CODE == 'en' %}
+                            <p>Sorry. No videos available yet.</p>
+                          {% else %}
+                            <p>Désolé. Pas encore de vidéos disponibles.</p>
+                          {% endif %}
+                        {% endif%}
+                  </div>
+              <!-- </div> -->
+          <!-- </div> -->
+          
+          <!-- <div class="row"> -->
+                  <div class="col-md-6 col-sm-12 mt-5" style="height: 400px; border-left: thin solid grey;">
+                      <!-- <h5>Nouveautés</h5> -->
+                      <a href="#" class="main-button-slider mb-5" role="button" style="font-size:1em; font-weight:bold">
+                        {% if LANGUAGE_CODE == 'en' %} 
+                            WHAT'S NEW? &nbsp&nbsp&nbsp>
+                        {% else %}
+                            NOUVEAUTES &nbsp&nbsp&nbsp>
+                        {% endif %}
+                      </a>
+
+                      <h6 class="mt-4"><em style="font-weight: bold; color:#fba70b;">
+                        {% if LANGUAGE_CODE == 'en' %} 
+                          Coming soon
+                        {% else %}
+                          A découvrir bientôt
+                        {% endif %}                      
+                      </em></h6>
+
+                      {% if LANGUAGE_CODE == 'en' %}
+                          <h6 class="mt-1 pl-4" style="font-weight: bold; color:#fba70b;"> 
+                            Digital support for young companies
+                          </h6>
+                          <div class="mt-1 pl-5">
+                            <small>Who is concerned ?
+                              Start'ups entrepreneurs with small budgets but interested in an idea of selling online or simply who wish to be effectively present on the web.</small>
+                          </div>                          
+                          <div class="mt-1 pl-5">
+                            <small><a id="infoparution1" href="{% url 'infoparution1' %}">Learn more...</a></small>                            
+                          </div>
+                        {% else %}
+                          <h6 class="mt-1 pl-4" style="font-weight: bold; color:#fba70b;">
+                            Accompagnement digital de jeunes entreprises
+                          </h6>
+                          <div class="mt-1 pl-5">
+                            <small>Qui est concerné ?
+                              Tous les nouveaux entrepreneurs à petits budgets mais intéressés par une idée celle de vendre en ligne ou simplement qui souhaite être présent efficacement sur le web.</small>
+                          </div>                          
+                          <div class="mt-1 pl-5">
+                            <small><a id="infoparution1" href="{% url 'infoparution1' %}">Je veux en savoir plus.</a></small>                            
+                          </div>
+                        {% endif %}                                                                                                              
+                                                
+                          <!-- <ul>
+                            L'incubateur fonctionne grâce à l'utilisation d'une plate-forme en ligne qui permet une interaction constante entre tous les sujets impliqués dans l'exécution du projet et les utilisateurs des services.                            
+                            A qui s’adresse-t-il ?
+                            À tous les aspirants entrepreneurs intéressés pour démarrer une entreprise dans les secteurs suivants: e-commerce et prestation de service.
+                          </ul> -->
+
+                      {% if LANGUAGE_CODE == 'en' %}
+                        <h6 class="mt-2 pl-4" style="font-weight: bold; color:#fba70b;">Virtual training workshop for digital professions</h6>
+                        <div class="mt-1 pl-5">
+                          <small>Are you looking for promising sector ? Go for digital !</small>
+                        </div>
+                        <div class="mt-1 pl-5">
+                          <small><a id="infoparution2" href="{% url 'infoparution2' %}">Learn more ...</a></small>                            
+                        </div>
+                      {% else %}
+                        <h6 class="mt-2 pl-4" style="font-weight: bold; color:#fba70b;">Atelier virtuel de formation aux métiers du digital</h6>
+                        <div class="mt-1 pl-5">
+                          <small>Vous voulez exercer dans un secteur en devenir ? Optez pour le digital !</small>
+                        </div>
+                        <div class="mt-1 pl-5">
+                          <small><a id="infoparution2" href="{% url 'infoparution2' %}">Je veux en savoir plus.</a></small>                            
+                        </div>
+                      {% endif %}                                                                                                              
+
+                          <!-- <ul>
+                            Le digital s’utilise partout. Dans tous les secteurs d’activité. On utilise ce terme pour regrouper tout ce qui touche à internet, au numérique et au mobile. Bref, à la technologie.
+                            Le digital se sert des innovations techniques pour inventer de nouveaux services et de nouvelles applications qui changent le quotidien, et apportent des solutions.
+
+                            Formation Communication digitale, Formation Evénementiel digital, Formation Marketingd digital
+                            Formation Médias, Formation Publicité, Formation WebDesign, Formation développement d'applications web et mobile.
+                          </ul> -->
+
+                          <!-- <h6 class="mt-2 pl-4">Cartes de visite électronique</h6> 
+                          <div class="mt-1 pl-5">
+                            <small>Vous êtes un commercial, vous rencontrez des centaines de clients à qui vous devez toujours laisser des cartes de visites!
+                                    Désormais, vous pourrez en donner, même sans rencontrer physiquement votre interlocuteur.
+                            </small> <br>
+
+                            <small><a href="">Contactez-moi, je suis intéressé.</a></small>
+                          </div> -->
+                          {% if LANGUAGE_CODE == 'en' %}
+                            <h6 class="mt-2 pl-4" style="font-weight: bold; color:#fba70b;">Web application web for restaurant table reservation and home delivery</h6>
+                            <div class="mt-1 pl-5">
+                              <small><a id="infoparution3" href="{% url 'infoparution3' %}">Learn more...</a></small>                            
+                            </div>
+                          {% else %}
+                            <h6 class="mt-2 pl-4" style="font-weight: bold; color:#fba70b;">Application web et 
+                              mobile de réservation de tables et de commande à livrer pour les restaurants</h6>
+                            <div class="mt-1 pl-5">
+                              <small><a id="infoparution3" href="{% url 'infoparution3' %}">Je veux en savoir plus.</a></small>                            
+                            </div>
+                          {% endif %}
+                  </div>
+          </div>
+          
+          <!-- <div style="height:50px;"></div> -->
+
+          <!-- Promotion -->
+          
+          <div class="row mt-5">
+              <div class="col-md-4 col-sm-12 text-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                {% if LANGUAGE_CODE == 'fr' %}
+                  <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo"><img src="{% static 'images/HotPromo30JuinFr.png' %}" alt="Promo" style="width:300px; height: 300px;"></a>
+                  <div class="w-100"></div>
+                  <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo">Cliquez - Offre limitée et sous conditions*</a>  
+                {% else %}
+                  <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo"><img src="{% static 'images/HotPromo30JuinEn.png' %}" alt="Promo" style="width:300px; height: 300px;"></a>
+                  <div class="w-100"></div>
+                  <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo">Click - Limited offer and under conditions*</a>  
+                {% endif %}
+
+              </div>
+
+              <div class="col-md-8 col-sm-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                  {% if LANGUAGE_CODE == 'fr' %}
+                      <h5 class="mt-5 text-primary font-weight-bold">PROMO - Jusqu'au 30 Juin 2022!</h5>
+                      <h6>Nous vous offrons un site web responsive! Devenez enfin un vrai professionnel, devenez propriétaire d'un vrai site web attrayant et responsive
+                        qui porte votre nom ou votre raison sociale. 
+                      </h6>
+                      <br>
+                      <p style="text-align: justify;">
+                        <!-- Comme un catalogue d'entreprise, votre site web vous permet de présenter 
+                        vos services et produits ou même vos idées en montrant en même temps votre ADN et vos valeurs. 
+                        C’est une vitrine qui met en avant votre activité, votre personnalité afin d’attirer l’attention de vos 
+                        clients, contacts et prospects sur votre sérieux et votre professionalisme.  -->
+                        Liez vos comptes de réseaux sociaux à votre site web.
+                        Faites ce que vous voulez sur votre site web, sans être bloqué par qui que ce soit. <br> 
+                        Différenciez-vous de vos concurrents en allant au delà d'une page facebook ou instagram.
+                        Entrez rapidement dans la cour des grands... <br><br>
+
+                        <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo">Je veux en savoir plus.</a>                      
+                      </p>
+                    {% else %}
+                        <h5 class="mt-5 text-primary font-weight-bold">PROMO - Until June 30, 2022!</h5>
+                        <h6>We offer you a responsive website! Finally become a real professional, own a real attractive and responsive website
+                          that bears your name or your company name. 
+                        </h6>
+                        <br>
+                        <p style="text-align: justify;">
+                          <!-- Like a business catalog, your website allows you to present
+                          your services and products or even your ideas by showing at the same time your DNA and your values.
+                          It is a showcase that highlights your activity, your personality in order to attract the attention of your
+                          customers, contacts and prospects on your seriousness and your professionalism. -->
+                          Link all your social media accounts to your website.
+                          Do whatever you want on your website, without being blocked by anyone. <br>
+                          Differentiate yourself from your competitors by going beyond a facebook or instagram page.
+                          Quickly step into the big leagues... <br><br>
+                          <a href="#" role="button" data-toggle="modal" data-target="#ModalPromo">I want to know more.</a>                      
+                        </p>
+                    {% endif %}
+              </div>
+          </div>
+
+          <!-- Popup Modal Promotion -->
+
+          <div class="modal fade" id="ModalPromo" tabindex="-1" role="dialog" aria-labelledby="exampleModalPromo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  {% if LANGUAGE_CODE == 'fr' %}
+                    <h5 class="modal-title text-center" id="exampleModalPromo">Je veux souscrire à la promo site web basic</h5>                  
+                  {% else %}
+                    <h5 class="modal-title text-center" id="exampleModalPromo">I want to subscribe to the basic website promo</h5>                  
+                  {% endif %}
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="form1" method ="POST" action="">
+                    {% csrf_token %}
+                    <div class="row">
+                        {% if LANGUAGE_CODE == 'fr' %}
+                            <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                            <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">Toutes 
+                                vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                            </small>
+                        {% else %}
+                            <p class="ml-3 mr-2 mb-2">Please fill in the information below first. :</p>
+                            <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">All
+                                your data will remain strictly confidential and will not be distributed without your permission.
+                                They will only allow us to get in touch with you and to better adapt our proposal to your situation!
+                            </small>
+                        {% endif %}
+  
+                        <div class="col-25 w-25 ml-3 mr-2">
+                          {% if LANGUAGE_CODE == 'fr' %}
+                            <label for="name1">Nom/raison sociale </label>
+                          {% else %}
+                            <label for="name1">Name/designation </label>
+                          {% endif %}      
+                        </div>
+                        
+                        <div class="col-75">
+                          <input style="width:100%;" type="text" id="name1" name="name1" placeholder="Votre nom ou raison sociale.." required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                          <label for="email1">email</label>
+                        </div>
+                        <div class="col-75">
+                          <input style="width:100%;" type="email" id="email1" name="email1" placeholder="Email.." required>
+                        </div>
+                      </div> 
+
+                      <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                          <label for="whatsapp1">WhatsApp/Tél.</label>
+                        </div>
+                        <div class="col-75">
+                          <input style="width:100%;" type="text" id="whatsapp1" name="whatsapp1" placeholder="WhatsApp..">
+                        </div>
+                      </div> 
+
+                      <div class="row">
+                        <div class="col-25 w-25 ml-3 mr-2">
+                          <label for="facebook1">Facebook</label>
+                        </div>
+                        <div class="col-75">
+                          <input style="width:100%;" type="text" id="facebook1" name="facebook1" placeholder="Facebook..">
+                        </div>
+                      </div> 
+                      
+                      <div class="row">
+                        <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                            <label class="form-label" for="activite1">Votre activité</label>
+                            <textarea id="activite1" name="activite1" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                          </div>                      
+                      </div> 
+
+                      <div class="row">
+                        <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                            {% if LANGUAGE_CODE == 'fr' %}
+                              <label class="form-label" for="besoin1">Précisez votre besoin</label>
+                            {% else %}
+                              <label class="form-label" for="besoin1">Specify your need</label>
+                            {% endif %}      
+
+                            <textarea id="besoin1" name="besoin1" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                          </div>                      
+                      </div> 
+
+                      <div class="row">  
+                        <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                          <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                            {% if LANGUAGE_CODE == 'fr' %}
+                              <label class="form-label" for="basic-url1">Votre site web ou page de réseau social actuel</label>
+                            {% else %}
+                              <label class="form-label" for="basic-url1">Your actual website or social network page</label>
+                            {% endif %}      
+
+                            <input id="basic-url1" style="width:100%;" type="text" name="basic-url1" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                          </div>                      
+                        </div>
+                    </div>
+
+                    <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">
+                        {% if LANGUAGE_CODE == 'fr' %}
+                          Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                        {% else %}
+                          We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                        {% endif %}                                    
+                    </small>    
+
+                      {% if LANGUAGE_CODE == 'en' %}
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <input id="reset-form1" type="reset" style="display: none;" value="Reset">
+                          <button type="submit" class="btn btn-primary">Send</button>
+                          <p id="msgPasHre1"></p>
+                        </div>
+                      {% else %}
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                          <input id="reset-form1" type="reset" style="display: none;" value="Reset">
+                          <button type="submit" class="btn btn-primary">Envoyer</button>
+                          <p id="msgPasHre1"></p>
+                        </div>
+                      {% endif %}                                                    
+                  </form>        
+                </div>
+              </div>
+            </div>
+        </div>        
+
+          <script>
+            $(document).on("submit", "#form1", function (e) {
+              e.preventDefault();
+      
+              if ($("#name1").val() == "") {
+                $("#msgPasHre1").text(
+                  "Il faut renseigner le nom !"
+                );
+                $("#msgPasHre1").focus();
+              } else {
+
+                $.ajax({
+                  type: "POST",
+                  url: "requete1/",
+                  data: {
+                    nom: $("#name1").val(),
+                    email: $("#email1").val(),
+                    whatsapp: $("#whatsapp1").val(),
+                    facebook: $("#facebook1").val(),
+                    activite: $("#activite1").val(),
+                    siteweb : $("#basic-url1").val(),
+                    besoin: $("#besoin1").val(),
+                    objetreq : "Promotion site web basic - jusqu'au 30 Juin 2022",
+                    csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                  },
+                  success: function (response) {
+                    $("#msgPasHre1").text(response);
+                    $("#reset-form1").click();
+                  },
+                  error: function () {
+                    $("#msgPasHre1").text("Attention. Il y a une erreur quelque part!");
+                  },
+                });
+              }
+            });
+          </script>  
+
+          <!-- Fin Popup Modal Promotion -->
+
+
+          <!-- Nos services -->
+
+            <div class="row mt-3" id="about">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    
+                    <div class="features-item">
+                        <div class="features-icon" style="text-align: justify;">
+                            <!-- <h2>01</h2> -->
+
+                            <div class="" style="text-align: center;">
+                                <img src="{% static 'images/website1.png' %}" alt="" style="width:80px; height: 80px;">
+                            </div>
+
+                            {% if LANGUAGE_CODE == 'en' %}                            
+                                <h3 class="mb-3" style="text-align: center;"> Web sites and Mobiles app creation.</h3>
+                                <p style="font-size:1.4em;"> You are a start-up and you want to be known! Or simply you want to sell your products on the Internet! <br><br>
+                                  The first step for you is the creation of a professional, attractive, dynamic and responsive website.
+                                  It's the first professional step to your online visibility around the world. <br><br>
+                                  We create your website and your Android or IOS mobile application for you.</p>
+                                <a href="#websitecrea" class="main-button">
+                                    Find more ...
+                                </a>
+                            {% else %}
+                                <h3 class="mb-3" style="text-align: center;">Réalisation Sites web et Mobiles app.</h3>
+                                <p style="font-size:1.4em;"> Vous êtes une start-up et vous voulez vous faire connaître! Ou tout simplement vous voulez vendre vos produits sur Internet! <br><br>
+                                  La première étape pour vous est la création d'un site Internet professionnel, attractif, dynamique et responsive.
+                                  C'est la première étape professionnelle de votre visibilité en ligne et dans le monde entier. <br><br>
+                                  Nous réalisons pour vous votre site Internet et votre application mobile Android ou IOS.</p>
+                                <a href="#websitecrea" class="main-button">
+                                    Lire plus
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon" style="text-align: justify;">
+                            <!-- <h2>02</h2> -->
+
+                            <div class="" style="text-align: center;"> 
+                                <img src="{% static 'images/optimize3.png' %}" alt="" style="width:80px; height: 80px;">
+                            </div>
+
+                            {% if LANGUAGE_CODE == 'en' %}                            
+                                <h3 class="mb-3" style="text-align: center;">SEO optimization of websites</h3>
+                                <p style="font-size:1.4em;">You already have a website that is not very visited and therefore does not attract you customers. <br><br>
+                                  SEO allows you to attract qualified traffic to your website because your content meets the
+                                  visitor's current search. The objective of SEO is to improve the trust placed in you by
+                                  Internet users and Google search engine. This leads to better visibility in main
+                                  search engines.</p>
+                                <a href="#seo" class="main-button">
+                                    Learn more.... !
+                                </a>
+                            {% else %}
+                                <h3 class="mb-3" style="text-align: center;">Optimisation SEO de sites web</h3>
+                                <p style="font-size:1.4em;">Vous avez déjà un site web qui n'est pas très visité et donc ne vous attire pas de clients.  <br><br>
+                                  Le SEO permet d'attirer du trafic qualifié sur votre site internet car votre contenu répond à la 
+                                  recherche actuelle du visiteur. L'objectif du SEO est d'améliorer la confiance que vous accordent 
+                                  les internautes et Google. Cela se traduit dans les faits par une meilleure visibilité dans 
+                                  les moteurs de recherche.</p>
+                                <a href="#seo" class="main-button">
+                                    Découvrez plus !
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon" style="text-align: justify;">
+                            <!-- <h2>03</h2> -->
+                            <!-- <img src="{% static 'images/features-icon-3.png' %}" alt=""> -->
+
+                            <div class="" style="text-align: center;"> 
+                                <img src="{% static 'images/ecommerce2.png' %}" alt="" style="width:80px; height: 80px;">
+                            </div>
+
+                            {% if LANGUAGE_CODE == 'en' %}                                
+                                <h3 class="mb-3" style="text-align: center;">E-Commerce Solutions</h3>
+                                <p style="font-size:1.4em;">
+                                    We set up e-commerce shops for you, adapted to local realities in terms of delivery and payment. <br><br>
+                                    We have designed solutions for online stock management, online invoicing and collection.
+                                    In addition, we have business web applications for pharmacists, hospitals and clinics, hotels and
+                                    restaurants, various service providers, schools and universities, etc.
+                                </p>
+                                <a href="#webapp" class="main-button">
+                                    Read more...
+                                </a>
+
+                            {% else %}
+                                <h3 class="mb-3" style="text-align: center;">E-Commerce Solutions</h3>
+                                <p style="font-size:1.4em;">
+                                  Nous mettons en place pour vous des boutiques de commerce en ligne, adaptées aux réalités locales en terme de livraison et de paiement.  <br><br>
+                                  Nous avons conçu des solutions de gestion de stock en ligne, de facturation et d'encaissement en ligne.
+                                  De plus, nous disposons d'applications web métier pour des pharmaciens, des hopitaux et cliniques, des hotels et 
+                                  restaurants, des prestataires de services divers, des écoles et universités, etc.
+                                </p>
+                                <a href="#webapp" class="main-button">
+                                    Plus d'infos
+                                </a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ***** Features Big Item End ***** -->
+
+    <div class="left-image-decor"></div>
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="promotion">
+        <div class="container">
+            <div class="row">
+                <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="{% static 'images/left-image.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
+                    <ul>
+                        <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                            <img src="{% static 'images/about-icon-01.png' %}" alt="">
+
+                            {% if LANGUAGE_CODE == 'fr' %}
+                                <div class="text">
+                                    <h3 class="mb-3">Nos valeurs - Les <em style="font-weight: bold; color:#fba70b;">résultats tangibles et chiffrables.</em></h3>
+                                    <p class="" style="font-size:1.4em; text-align: justify;">
+                                        Nous sommes orientés prioritairement sur les résultats tangibles et chiffrables.
+                                      Nous évaluons les données avant le projet. Et nous mesurons les résultats obtenus progressivement 
+                                      au fur et à mesure du déploiement et des corrections.                                             
+                                    </p>
+                                </div>
+                            {% else %}
+                                <div class="text">
+                                  <h3 class="mb-3">Our values - <em style="font-weight: bold; color:#fba70b;">tangible and quantifiable results.</em></h3>
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                    We are primarily tangible and quantifiable results oriented.
+                                    We evaluate the data before the project. And we measure the results obtained gradually
+                                    as the project progresses.                                            
+                                  </p>
+                                </div>
+                            {% endif %}
+                        </li>
+                        <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
+                            <img src="{% static 'images/about-icon-02.png' %}" alt="">
+
+                            {% if LANGUAGE_CODE == 'fr' %}
+                                <div class="text">
+                                    <h3 class="mb-3">Nos valeurs - La <em style="font-weight: bold; color:#fba70b;">rapidité</em> mais aussi l'<em style="font-weight: bold; color:#fba70b;">évolutivité</em></h3>
+                                    <p class="" style="font-size:1.4em; text-align: justify;">
+                                        Nous estimons que les défis des entreprises sont pressants. Donc nous n'atttendons 
+                                        pas de terminer complètement le cahier des charges avant la livraison. Nous livrons au fur et à mesure,
+                                        fonctionalité par fonctionalité.<br>
+                                        Et nous corrigeons au fur et à mesure avec le soutien et les commentaires des utilisateurs.
+                                    </p>
+                                </div>
+                            {% else %}
+                                <div class="text">
+                                  <h3 class="mb-3">Our values <em style="font-weight: bold; color:#fba70b;">rapidity</em> but also <em style="font-weight: bold; color:#fba70b;">scalability</em></h3>
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                    We believe that business challenges are urgent. So we don't wait
+                                    the achieving of all the specifications before delivery. We deliver as we go,
+                                    feature by feature.<br>
+                                    And we're fixing it as we go along with support and user feedback.
+                                  </p>
+                                </div>
+                            {% endif %}
+                        </li>
+                        <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+                            <img src="{% static 'images/about-icon-03.png' %}" alt="">
+                            
+                            {% if LANGUAGE_CODE == 'fr' %}
+                              <div class="text">
+                                  <h3 class="mb-3">Nos valeurs - <em style="font-weight: bold; color:#fba70b;">L'intégration permanente de l'usager final.</em></h4>
+                                  <p class="" style="font-size:1.4em; text-align: justify;">Nous estimons que le client doit être au début, au milieu et à la fin du projet.
+                                      C'est pourquoi nous veillons à l'association permanente du client non seulement à l'équipe de pilotage du projet mais aussi 
+                                      aux équipes de développement et de test.</p>
+                              </div>
+                            {% else %}
+                                <div class="text">
+                                  <h3 class="mb-3">Our values - <em style="font-weight: bold; color:#fba70b;">The permanent integration </em>of the end user.</h4>
+                                  <p class="" style="font-size:1.4em; text-align: justify;">We believe that the client should be at the beginning, middle and end of the project.
+                                    This is why we ensure the permanent association of the client not only with the project management team but also with the
+                                    development and testing teams.</p>
+                                </div>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <div class="right-image-decor"></div>
+
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="websitecrea">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 offset-lg-2 mx-auto">
+                    <div class="center-heading">
+
+                      {% if LANGUAGE_CODE == 'fr' %}
+                            <h2><em>Sites web,</em> Réseaux sociaux,<em> Mobile App</em></h2>
+                            <h3 class="text-center">Pourquoi ne pas avoir un site internet responsive pour votre business, en 2022, est un manque de sérieux?</h3>                        
+
+                            <h4 class="text-center mt-4 mb-4">Qu'est ce qu'un site web responsive?</h4>
+                            <p class="" style="font-size:1.4em; text-align: justify;">
+                                Un site responsive est un site qui est conçu et développé de façon à pouvoir s’adapter à toutes les 
+                                résolutions d’écran.  <br><br>
+                                C’est donc un seul et même site mais qui peut être consulté sur ordinateur, sur 
+                                smartphone ou sur tablette en s'adaptant automatiquement à chaque fois à la largeur de l'écran de l'utilisateur.
+                            </p>
+                      {% else %}
+                          <h2><em>Sites web,</em> Social networks,<em> Mobile App</em></h2>
+                          <h3 class="text-center">Why not having a responsive website for your business in 2022 is a lack of seriousness?</h3>                        
+
+                          <h4 class="text-center mt-4 mb-4">What's called responsive website ?</h4>
+                          <p class="" style="font-size:1.4em; text-align: justify;">
+                            A responsive website is designed and developed in such a way that it can adapt to all
+                            screen resolutions. <br><br>
+                            It is therefore one website but which can be consulted on computer, on
+                            smartphone or tablet, automatically adapting each time to the width of the user's screen.                          </p>
+                      {% endif %}
+
+                        <img src="{% static 'images/stats-web.webp' %}" alt="" class="w-100 mt-4 mb-4">
+
+                        <div style="height : 50px;"></div>
+                      {% if LANGUAGE_CODE == 'fr' %}
+                          <h3 class="text-center">Quelles sont les grandes catégories de sites web?</h3>
+                      {% else %}
+                          <h3 class="text-center">What are the main types of websites?</h3>
+                      {% endif %}
+
+                          <img src="https://avatars.mds.yandex.net/i?id=cc063bc0f8bf8b396da4e16f1da120cf-5877477-images-thumbs&n=13" alt="" class="w-100 mt-5">
+                          
+                          <div class="row">                           
+                            <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <h4 class="mb-4">Le site « carte de visite »</h4> 
+
+                                <p class="" style="font-size:1.4em; text-align: justify;">
+                                  C'est la forme la plus élémentaire de site web. Un site de type « carte de visite » ne comporte 
+                                  que les informations nécessaires pour contacter votre entreprise et une brève description de vos activités. <br><br>
+                                  Généralement, il est composé d'une seule page, ne propose que très peu de contenu et n’a pas de valeur ajoutée en soit. <br><br>
+                                  Il ne coute en conception et réalisation que quelques milliers de francs CFA ou un demi millier de dollars US environ. 
+                                </p>
+                              {% else %}
+                                <h4 class="mb-4">The "business card" type website</h4> 
+
+                                <p class="" style="font-size:1.4em; text-align: justify;">
+                                  It is the most basic form of website. A "business card" type website include
+                                  only the information necessary to contact your company and a brief description of your activities. <br><br>
+                                  Generally, it is composed of a single page, offers very little content and has no added value in itself. <br><br>
+                                  It only costs a few thousand CFA francs or half a thousand US dollars to design and build.                                </p>
+                              {% endif %}
+                            </div>
+
+                           <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <h4 class="mb-4">"Le site vitrine"</h4>
+
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                    C'est un site un peu plus élaboré que le site "carte de visite". Il est purement informatifs et présentent 
+                                    en principe l’activité, les valeurs, les dernières actualités ainsi que les réalisations de l'entité 
+                                    qu'elle présente. <br><br>
+                                    Ce type de site peut contenir des éléments animés tels que des images qui défilent ou bien un 
+                                    formulaire de contact, mais ce type de site ne permet pas d’interaction dynamique avec l’utilisateur.<br><br>
+                                    Il peut couter en conception et réalisation un million de francs CFA au minimum ou 2 milliers de dollars US au minimum en fonction du nombre de pages à concevoir.
+                                  </p>
+                              {% else %}
+                                  <h4 class="mb-4">The static website</h4> 
+  
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                    This is a slightly more elaborate site than the "business card" type website. It is purely informations related to the activity, 
+                                    the values, and the latest news and achievements. <br><br>
+                                    This type of website can contain animated elements such as scrolling images or a contact form, but this type of site does not allow 
+                                    dynamic interaction with the user.<br><br>
+                                    It can cost in design and production at least one million CFA francs or at least 2 thousand US dollars depending on the number 
+                                    of pages to be designed and the complexity of the animations to insert.                                  
+                                  </p>
+                              {% endif %}
+  
+                           </div>
+
+                           <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+
+                            {% if LANGUAGE_CODE == 'fr' %}
+                              <h4 class="mb-4">Le site dynamique</h4>
+
+                              <img src="{% static 'images/marketing-strategy.webp' %}" alt="" class="w-100 mb-4">
+
+                              <p class="" style="font-size:1.4em; text-align: justify;">
+                                Un site Web dynamique contient des informations qui changent en fonction de
+                                 l'utilisateur, de l'heure de la journée, du fuseau horaire, de la langue maternelle de l'utilisateur et 
+                                 d'autres facteurs. <br><br>
+                                 Par exemple, la page d'accueil et les pages internes peuvent changer automatiquement tous les jours pour 
+                                 offrir aux visiteurs de nouveaux contenus. Un site Web dynamique contient une ou des bases de données qui
+                                 conservent les informations données par l'utilisateur.
+                              </p>
+                              <br>
+                              <p class="" style="font-size:1.4em; text-align: justify;">
+                                Ce type de sites peut couter en conception et réalisation quelques millions de francs CFA ou quelques milliers de dollars US.
+                              </p> 
+                            {% else %}
+                                <h4 class="mb-4">The dynamic website</h4>
+
+                                <img src="{% static 'images/marketing-strategy.webp' %}" alt="" class="w-100 mb-4">
+
+                                <p class="" style="font-size:1.4em; text-align: justify;">
+                                    A dynamic website contains information that changes depending on
+                                    user, time of day, time zone, user's native language, and
+                                    other factors. <br><br>
+                                    For example, the home page and internal pages can change automatically every day to
+                                    offer visitors new content. A dynamic website contains one or more databases that
+                                    keep the information given by the user.
+                                </p>
+                                <br>
+                                <p class="" style="font-size:1.4em; text-align: justify;">
+                                  This type of site can cost in design and production a few million CFA francs or a few thousand US dollars.
+                                </p>                                                           
+                            {% endif %}
+                           </div>
+
+                           <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+                                <h4 class="mb-4">Le site de E-Commerce</h4>
+
+                                <img src="{% static 'images/ecommerce.webp' %}" alt="" class="w-100 mb-4">
+
+                                <p class="" style="font-size:1.4em; text-align: justify;">
+                                    Ou la boutique en ligne. C'est une forme de site dynamique mais dédié au commerce en ligne. <br><br>
+                                    Le commerce électronique est l'ensemble des transactions par lesquelles les clients achètent en ligne et y effectue leur paiement grâce aux cartes bancaires VISA ou MASTERCARD 
+                                    par exemple ou grâce aux paiement par Mobile money ou virement bancaire. <br><br>
+                                    Un site Web de commerce électronique permet aux visiteurs de trouver leur(s) produit(s), de les ajouter à 
+                                    leur « panier » virtuel et de saisir en toute sécurité leurs informations de paiement pour finaliser leur achat.
+                                </p>
+                                
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                    <h4 class="mb-4">Les sites applicatifs</h5>
+
+                                    <img src="{% static 'images/facebook.jpg' %}" alt="" class="w-100 mb-4">
+
+                                    <p class="" style="font-size:1.4em; text-align: justify;">
+                                        Les sites applicatifs ou Web App sont ceux qui permettent le plus grand niveau d’interactivité avec 
+                                        l’utilisateur. <br><br>
+                                        Ici, le site est un logiciel accessible via un navigateur Internet. <br><br> 
+                                        Comme par exemple Instagram ou Facebook qui vous 
+                                        met en relation avec un réseau d’amis et vous permet de partager du contenu. Ou encore Google Maps 
+                                        qui vous permet d’établir un itinéraire, ou un site de banque en ligne, ou un site web de voyage qui vous permet de
+                                        comparer et de réserver des places sur des vols…<br><br>
+                                        Ces sites sont ceux qui ont donc le plus de valeur ajoutée car ils rendent un service tangible à 
+                                        l’utilisateur. Ce sont également les plus difficiles à développer, mais aussi ceux qui coutent le plus cher !                        
+                                    </p>
+
+                              {% else %}
+                                  <h4 class="mb-4">Application websites</h5>
+
+                                    <img src="{% static 'images/facebook.jpg' %}" alt="" class="w-100 mb-4">
+
+                                    <p class="" style="font-size:1.4em; text-align: justify;">
+                                      Application websites allow the greatest level of interactivity with
+                                      the user. <br><br>
+                                      Here, the site is a software accessible via an Internet browser. <br><br>
+                                      Like for example Instagram or Facebook which
+                                      connects you to a network of friends and allows you to share content. Or Google Maps
+                                      which allows you to establish an itinerary, or an online banking site, or a travel website which allows you to
+                                      compare and book seats on flights…<br><br>
+                                      These sites are therefore the ones that have the most added value because they provide a tangible service to
+                                      the user. They are also the most difficult to develop, but also the most expensive!                                    
+                                    </p>
+                              {% endif %}
+        
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <h4 class="mb-4">Les sites intranets</h4>
+
+                                  <img src="{% static 'images/intranet2.jpg' %}" alt="" class="w-100 mb-4">
+
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                      Un intranet est un type de site internet particulier qui permet à ses utilisateurs d’échanger, de s’informer ou 
+                                      bien de travailler ensemble. <br><br>
+                                      Souvent mis en place dans les entreprises, c’est un site à accès 
+                                      restreint ce qui signifie qu’il faut, avoir les paramètres d'accès afin de s’y connecter.
+                                  </p>
+                              {% else %}
+                                  <h4 class="mb-4">Intranet website</h4>
+
+                                  <img src="{% static 'images/intranet2.jpg' %}" alt="" class="w-100 mb-4">
+
+                                  <p class="" style="font-size:1.4em; text-align: justify;">
+                                    An intranet is a special type of website that allows its users to exchange, and work together. <br><br>
+                                    Often set up in companies, it is a web site with access
+                                    restricted which means that you must have the access parameters in order to connect to it.                                  
+                                  </p>
+                              {% endif %}
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 mx-auto text-center mt-5" > 
+                              {% if LANGUAGE_CODE == 'fr' %}                               
+                                <h4 class="mb-4">Les applications mobiles</h5>
+                              {% else %}
+                                <h4 class="mb-4">Mobile applications</h5>
+                              {% endif %}
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+                                <img src="{% static 'images/african-checking-social-media.webp' %}" alt="" class="w-80 mb-4">                                    
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 mx-auto text-center mt-5" >
+                                <img src="{% static 'images/mobile-smartphone.jpg' %}" alt="" class="w-100 mb-4">
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 mx-auto text-center mt-5" >
+                              {% if LANGUAGE_CODE == 'fr' %}                                
+                                <p class="" style="font-size:1.4em;text-align: justify;">
+                                    Une application mobile est un logiciel applicatif développé pour un appareil électronique mobile, 
+                                    tel qu'un téléphone portable, un smartphone, un baladeur numérique, 
+                                    une tablette tactile. Ces applications sont conçues pour s'exécuter sous Android, IOS ou Microsoft.
+                                </p>
+                                <br>
+                                <p class="" style="font-size:1.4em; text-align: justify;"> Exemples d'applications mobiles : Uber, Yango, Zoom cloud meeting, etc.</p>
+                                <br>
+                                <p class="" style="font-size:1.4em;text-align: justify;">
+                                    Avec une application mobile, votre marque devient mobile. Vos prospects et clients sont exposés à votre 
+                                    marque au quotidien ce qui établit également un lien plus fort et personnel avec votre marque.
+                                    Développer une application mobile est un bon moyen de renforcer son image de marque et de se différencier 
+                                    de la concurrence.
+                                </p>
+                              {% else %}
+                                  <p class="" style="font-size:1.4em;text-align: justify;">
+                                    A mobile application is software developed for a mobile electronic device,
+                                     such as a cell phone, a smartphone, a digital music player,
+                                     A touchpad. These applications are designed to run on Android, IOS or Microsoft.
+                                  </p>
+                                  <br>
+                                  <p class="" style="font-size:1.4em; text-align: justify;"> Examples of mobile applications: Uber, Yango, Zoom cloud meeting, etc.</p>
+                                  <br>
+                                  <p class="" style="font-size:1.4em;text-align: justify;">
+                                    With a mobile app, your brand goes mobile. Your prospects and customers are exposed to your
+                                    brand on a daily basis which also establishes a stronger and more personal connection with your brand.
+                                    Developing a mobile application is a good way to strengthen your brand image and differentiate yourself from the
+                                    competition.
+                                  </p>
+                              {% endif %}
+
+                                <div style="height:30px;"></div>
+                                <!-- <a href="#" class="main-button-slider">JE VEUX UNE MAQUETTE GRATUITE</a> -->
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalMaquetteGratuite">JE VEUX UN SITE WEB</a>
+                                  <div style="height:35px;"></div>
+                                  <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalAppliMobile">JE VEUX UNE APPLICATION MOBILE</a>
+                                {% else %}
+                                  <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalMaquetteGratuite">I NEED A WEBSITE</a>
+                                  <div style="height:35px;"></div>
+                                  <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalAppliMobile">I NEED A MOBILE APP.</a>
+                                {% endif %}
+                            </div> 
+                                                                
+                          </div>
+                                              
+                    </div>
+                </div>
+
+                <!-- Fenetre modal Website-->
+
+                <div class="modal fade" id="exampleModalMaquetteGratuite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          {% if LANGUAGE_CODE == 'fr' %}
+                            <h5 class="modal-title text-center" id="exampleModalLabel">Je veux un site web</h5>                  
+                          {% else %}
+                            <h5 class="modal-title text-center" id="exampleModalLabel">I need a website</h5>                  
+                          {% endif %}
+
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="form2" method ="POST" action="">
+                            {% csrf_token %}
+                            <div class="row">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                    <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                                    <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">Toutes 
+                                        vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                        Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                                    </small>
+                                {% else %}
+                                    <p class="ml-3 mr-2 mb-2">Please fill in the information below first. :</p>
+                                    <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">All
+                                        your data will remain strictly confidential and will not be distributed without your permission.
+                                        They will only allow us to get in touch with you and to better adapt our proposal to your situation!
+                                    </small>
+                                {% endif %}
+          
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  {% if LANGUAGE_CODE == 'fr' %}
+                                    <label for="name2">Nom/raison sociale </label>
+                                  {% else %}
+                                    <label for="name2">Name/designation </label>
+                                  {% endif %}      
+                                </div>
+                                
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="name2" name="name2" placeholder="Votre nom ou raison sociale.." required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="email2">email</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="email" id="email2" name="email2" placeholder="Email.." required>
+                                </div>
+                              </div> 
+        
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="whatsapp2">WhatsApp/Tél.</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="whatsapp2" name="whatsapp2" placeholder="WhatsApp..">
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="facebook2">Facebook</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="facebook2" name="facebook2" placeholder="Facebook..">
+                                </div>
+                              </div> 
+                              
+                              <div class="row">
+                                <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                    <label class="form-label" for="activite2">Votre activité</label>
+                                    <textarea id="activite2" name="activite2" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                                  </div>                      
+                              </div> 
+
+                              <div class="row">
+                                <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label class="form-label" for="besoin2">Précisez votre besoin</label>
+                                    {% else %}
+                                      <label class="form-label" for="besoin2">Specify your need</label>
+                                    {% endif %}      
+
+                                    <textarea id="besoin2" name="besoin2" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                                  </div>                      
+                              </div> 
+
+                              <div class="row">                               
+                                <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                                  <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label class="form-label" for="basic-url2">Votre site web ou page de réseau social actuel</label>
+                                    {% else %}
+                                      <label class="form-label" for="basic-url2">Your actual website or social network page</label>
+                                    {% endif %}      
+        
+                                    <input id="basic-url2" style="width:100%;" type="text" name="basic-url2" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                                  </div>                      
+                                </div>
+                            </div>
+
+                            <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                                {% else %}
+                                  We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                                {% endif %}                                    
+                            </small>    
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                    <input id="reset-form2" type="reset" style="display: none;" value="Reset">
+                                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                                    <p id="msgPasHre2"></p>
+                                  </div>
+                              {% else %}
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input id="reset-form2" type="reset" style="display: none;" value="Reset">
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                    <p id="msgPasHre2"></p>
+                                  </div>
+                              {% endif %}                                                    
+                          </form>        
+                        </div>
+                      </div>
+                    </div>
+                </div>        
+        
+                  <script>
+                    $(document).on("submit", "#form2", function (e) {
+                      e.preventDefault();
+              
+                      if ($("#name2").val() == "") {
+                        $("#msgPasHre2").text(
+                          "Il faut renseigner le nom !"
+                        );
+                        $("#msgPasHre2").focus();
+                      } else {
+
+                        $.ajax({
+                          type: "POST",
+                          url: "requete1/",
+                          data: {
+                            nom: $("#name2").val(),
+                            email: $("#email2").val(),
+                            whatsapp: $("#whatsapp2").val(),
+                            facebook: $("#facebook2").val(),
+                            activite: $("#activite2").val(),
+                            siteweb : $("#basic-url2").val(),
+                            besoin: $("#besoin2").val(),
+                            objetreq : "Besoin d'un site web",
+                            csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                          },
+                          success: function (response) {
+                            $("#msgPasHre2").text(response);
+                            $("#reset-form2").click();
+                          },
+                          error: function () {
+                            $("#msgPasHre2").text("Attention. Il y a une erreur quelque part!");
+                          },
+                        });
+                      }
+                    });
+                  </script>  
+                  
+                <!-- Fenetre modal Mobile Application-->
+
+                <div class="modal fade" id="exampleModalAppliMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelMobile" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        {% if LANGUAGE_CODE == 'fr' %}
+                          <h5 class="modal-title text-center" id="exampleModalLabelMobile">Je veux une appli. mobile</h5>                  
+                        {% else %}
+                          <h5 class="modal-title text-center" id="exampleModalLabelMobile">I need a mobile app.</h5>                  
+                        {% endif %}
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form22" method ="POST" action="">
+                          {% csrf_token %}
+                          <div class="row">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">Toutes 
+                                      vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                      Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                                  </small>
+                              {% else %}
+                                  <p class="ml-3 mr-2 mb-2">Please fill in the information below first. :</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">All
+                                      your data will remain strictly confidential and will not be distributed without your permission.
+                                      They will only allow us to get in touch with you and to better adapt our proposal to your situation!
+                                  </small>
+                              {% endif %}
+        
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <label for="name22">Nom/raison sociale </label>
+                                {% else %}
+                                  <label for="name22">Name/designation </label>
+                                {% endif %}      
+                              </div>
+                              
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="name22" name="name22" placeholder="Votre nom ou raison sociale.." required>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="email22">email</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="email" id="email22" name="email22" placeholder="Email.." required>
+                              </div>
+                            </div> 
+      
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="whatsapp22">WhatsApp/Tél.</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="whatsapp22" name="whatsapp22" placeholder="WhatsApp..">
+                              </div>
+                            </div> 
+
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="facebook22">Facebook</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="facebook22" name="facebook22" placeholder="Facebook..">
+                              </div>
+                            </div> 
+                            
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                  <label class="form-label" for="activite22">Votre activité</label>
+                                  <textarea id="activite22" name="activite22" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                  {% if LANGUAGE_CODE == 'fr' %}
+                                    <label class="form-label" for="besoin22">Précisez votre besoin</label>
+                                  {% else %}
+                                    <label class="form-label" for="besoin22">Specify your need</label>
+                                  {% endif %}      
+
+                                  <textarea id="besoin2" name="besoin22" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <div class="row">                                 
+                              <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                                <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                  {% if LANGUAGE_CODE == 'fr' %}
+                                    <label class="form-label" for="basic-url4">Votre site web ou page de réseau social actuel</label>
+                                  {% else %}
+                                    <label class="form-label" for="basic-url4">Your actual website or social network page</label>
+                                  {% endif %}      
+      
+                                  <input id="basic-url4" style="width:100%;" type="text" name="basic-url4" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                                </div>                      
+                            </div>
+                          </div>
+
+                          <small class="form-text text-danger ml-3 mr-3 mb-3" style="font-size: 0.7em; font-style: italic; text-align: justify;">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                              {% else %}
+                                We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                              {% endif %}                                    
+                          </small>    
+
+                            {% if LANGUAGE_CODE == 'fr' %}
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                  <input id="reset-form22" type="reset" style="display: none;" value="Reset">
+                                  <button type="submit" class="btn btn-primary">Envoyer</button>
+                                  <p id="msgPasHre22"></p>
+                                </div>
+                            {% else %}
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <input id="reset-form22" type="reset" style="display: none;" value="Reset">
+                                  <button type="submit" class="btn btn-primary">Send</button>
+                                  <p id="msgPasHre22"></p>
+                                </div>
+                            {% endif %}                                                    
+                        </form>        
+                      </div>
+                    </div>
+                  </div>
+              </div>        
+      
+                <script>
+                  $(document).on("submit", "#form22", function (e) {
+                    e.preventDefault();
+            
+                    if ($("#name22").val() == "") {
+                      $("#msgPasHre22").text(
+                        "Il faut renseigner le nom !"
+                      );
+                      $("#msgPasHre22").focus();
+                    } else {
+
+                      $.ajax({
+                        type: "POST",
+                        url: "requete1/",
+                        data: {
+                          nom: $("#name22").val(),
+                          email: $("#email22").val(),
+                          whatsapp: $("#whatsapp22").val(),
+                          facebook: $("#facebook22").val(),
+                          activite: $("#activite22").val(),
+                          siteweb : $("#basic-url22").val(),
+                          besoin: $("#besoin22").val(),
+                          objetreq : "Besoin d'une application mobile",
+                          csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                        },
+                        success: function (response) {
+                          $("#msgPasHre22").text(response);
+                          $("#reset-form22").click();
+                        },
+                        error: function () {
+                          $("#msgPasHre22").text("Attention. Il y a une erreur quelque part!");
+                        },
+                      });
+                    }
+                  });
+                </script>              
+                
+            </div>
+        </div>
+    </section>
+
+    
+   <!-- testimonial 2 -->
+
+   <!-- <div class=""></div> -->
+
+   <section class="section" id="seo" style="background-image: url(/static/images/left-bg-decor.png);
+        background-position: left; /* Center the image */
+        background-repeat: no-repeat; 
+        background-size: cover;/* Do not repeat the image */">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 offset-lg-2 mx-auto">
+                  <div class="center-heading text-center">
+                      {% if LANGUAGE_CODE == 'fr' %}
+                            <h2 class="mb-4 mt-4">Optimisation <em>SEO</em> de sites web </h2>
+                            <p class="" style="font-size:1.4em;text-align: justify;">SEO est l'acronyme de Search Engine Optimization et peut être défini comme l'art de positionner un site, 
+                              une page web ou une application dans les premiers résultats naturels des moteurs de recherche. 
+                              En français, le SEO est désigné par le terme de référencement naturel.<br><br>
+                              Les marques ont d'abord besoin du référencement, car c'est le moyen le plus viable et le plus rentable de 
+                              comprendre et d'atteindre les clients au bon moment, surtout au moment précis où le besoin de vos services 
+                              et produits se crént chez eux.
+                            </p>
+                            
+                          <h3 class="mb-4 mt-4">Pourquoi le référencement prend-il de plus en plus d'importance ?</h3>
+
+                          <p class="" style="font-size:1.4em; text-align: justify;">
+                              Voici quelques raisons pour lesquelles les entreprises ont besoin 
+                              du référencement pour faire passer leur marque au niveau supérieur.
+                          </p>
+
+                          <h4 class="mb-4 mt-4">1. La recherche sur les moteurs de recherche (Google, Yahoo, Bing, Youtube, etc) est le plus souvent la principale source de trafic sur votre site Web</h4>
+                          <p class="" style="font-size:1.4em; text-align: justify;">
+                              Google, étant le site Web le plus visité au monde, il est également le fournisseur de messagerie 
+                              le plus populaire au monde avec plus d'un milliard d' utilisateurs. <br><br>
+
+                              YouTube est le deuxième plus grand moteur de recherche et plus de 2 milliards de personnes y accèdent 
+                              au moins une fois par mois.<br><br>
+                              
+                              Nous savons qu'une nette majorité de la population mondiale ayant accès à Internet visite Google au moins 
+                              une fois par jour pour obtenir des informations.<br><br>
+                              
+                              Être très visible en tant que site web de confiance par Google et d'autres moteurs de recherche 
+                              fonctionnera toujours en faveur de votre marque. <br><br>
+
+                              Un référencement de qualité et un site Web de haute qualité donneront des points gagnants pour votre marque.
+                          </p>
+
+                          <h4 class="mb-4 mt-4">2. Le SEO est le meilleur moyen de comprendre la voix du consommateur</h4>
+                      
+                          <p class="" style="font-size:1.4em; text-align: justify;">
+                              Qu'il s'agisse de comprendre les évolutions macroéconomiques du marché ou de comprendre 
+                              l'intention des consommateurs dans les moindres détails, <a href="https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche">le référencement</a>
+                              vous indique ce que vos clients potentiels veulent et ceux dont ils ont besoin de façon préécise. Ainsi vous pouvez 
+                              réajuster constamment votre offre.
+                          </p>
+
+                          <img class="mb-4 mt-4" src="{% static 'images/avantagesSEO.png' %}" alt="" style="width:100%;">                                    
+
+                          <h3 class="mb-4 mt-4">Par quoi commencer pour optimiser le référencement de votre site web ?</h3>
+
+                          <p class="" style="font-size:1.4em;text-align: justify;">
+                              Il faut demander un <a href="https://en.wikipedia.org/wiki/Website_audit">audit SEO</a>. L'audit révélera le positionnement actuel de votre site Internet, ses faiblesses et fera des recommandations pour 
+                              l'amélioration du référencement de votre site web. C’est une phase très importante dans le référencement qui permet d’analyser 
+                              chaque critère important afin de mettre en place une bonne stratégie. 
+                          </p>
+
+                          <div style="height:50px;"></div>
+                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">BESOIN D'OPTIMISER MON SITE WEB!</a>
+
+                        {% else %}
+                          <h2 class="mb-4 mt-4"><em>SEO</em> Optimization of websites </h2>
+                          <p class="" style="font-size:1.4em;text-align: justify;">SEO is the acronym for Search Engine Optimization and can be defined as the art of positioning a site,
+                            a web page or an application in the first natural results of search engines.
+                            In French, SEO is referred to as natural referencing.<br><br>
+                            Brands need SEO first because it's the most viable and profitable way to
+                            understand and reach customers at the right time, especially at the precise moment when the need for your services
+                            and products are created at home.
+                          </p>
+                          
+                        <h3 class="mb-4 mt-4">Why is SEO becoming more and more important?</h3>
+
+                        <p class="" style="font-size:1.4em; text-align: justify;">
+                          Here are some reasons why businesses need
+                          SEO to take their brand to the next level.                        
+                        </p>
+
+                        <h4 class="mb-4 mt-4">1. Search engine research (Google, Yahoo, Bing, Youtube, etc.) is most often the main source of traffic to your website</h4>
+                        <p class="" style="font-size:1.4em; text-align: justify;">
+                            Google, being the most visited website in the world, it is also the email provider
+                            the most popular in the world with over a billion users. <br><br>
+
+                            YouTube is the second largest search engine and more than 2 billion people access it
+                            at least once a month.<br><br>
+                              
+                            We know that a clear majority of the world's population with internet access visits Google at least
+                            once a day for information.<br><br>
+                          
+                            Be highly visible as a trusted website by Google and other search engines
+                            will always work in favor of your brand. <br><br>
+
+                            Quality SEO and a high quality website will give winning points for your brand.                        
+                        </p>
+
+                        <h4 class="mb-4 mt-4">2. SEO is the best way to understand the voice of the consumer</h4>
+                    
+                        <p class="" style="font-size:1.4em; text-align: justify;">
+                            Whether it is to understand the macroeconomic evolution of the markets or to understand
+                            consumer intent in detail, <a href="https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche">SEO</a>
+                            tells you exactly what your potential customers want and need. So you can
+                            constantly readjust your offer. 
+                        </p>
+
+                        <img class="mb-4 mt-4" src="{% static 'images/avantagesSEO.png' %}" alt="" style="width:100%;">                                    
+
+                        <h3 class="mb-4 mt-4">Where to start the SEO optimization of your website from?</h3>
+
+                        <p class="" style="font-size:1.4em;text-align: justify;">
+                            You have to ask for a <a href="https://en.wikipedia.org/wiki/Website_audit">SEO audit</a>. The audit will reveal the current positioning of your website, its weaknesses and make recommendations for
+                            improving the SEO of your website. This is a very important phase in SEO which allows you to analyze
+                            each important criterion in order to implement a good strategy.                          
+                        </p>
+
+                        <div style="height:50px;"></div>
+                        <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDevisSEO">I NEED TO OPTIMIZE MY WEBSITE</a>
+                        <!-- <a href="#" class="main-button-slider">DEMANDER UN DEVIS GRATUIT</a> -->
+                      {% endif %}                    
+                  </div>
+              </div>
+
+                <!-- Fenetre modal -->
+
+                <div class="modal fade" id="exampleModalDevisSEO" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          {% if LANGUAGE_CODE == 'fr' %}
+                              <h5 class="modal-title text-center" id="exampleModalLabel">Besoin d'optimiser mon site Internet</h5>                  
+                          {% else %}
+                              <h5 class="modal-title text-center" id="exampleModalLabel">I need a SEO optimization for my website</h5>                  
+                          {% endif %}
+                          
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="form3" method ="POST" action="">
+                            <div class="row">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                    <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                                    <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">Toutes 
+                                        vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                        Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                                    </small>
+                                {% else %}
+                                    <p class="ml-3 mr-2 mb-2">Please fill in the information below first:</p>
+                                    <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">All
+                                      your data will remain strictly confidential and will not be distributed without your permission.
+                                      They will only allow us to get in touch with you and to better adapt our offer to your situation!
+                                    </small>
+                                {% endif %}
+        
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label for="name3">Nom/Raison sociale </label>
+                                    {% else %}
+                                      <label for="name3">Name/Designation </label>
+                                    {% endif %}  
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="name3" name="name3" placeholder="Votre nom ou raison sociale..">
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="email3">Email</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="email" id="email3" name="email3" placeholder="Email..">
+                                </div>
+                              </div> 
+        
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="whatsapp3">WhatsApp/Tél.</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="whatsapp3" name="whatsapp3" placeholder="WhatsApp..">
+                                </div>
+                              </div> 
+
+                              <div class="row">
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="facebook3">Facebook</label>
+                                </div>
+                                <div class="col-75">
+                                  <input style="width:100%;" type="text" id="facebook3" name="facebook3" placeholder="Facebook..">
+                                </div>
+                              </div> 
+                              
+                              <div class="row">
+                                <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label class="form-label" for="activite3">Votre activité</label>
+                                    {% else %}
+                                      <label class="form-label" for="activite3">Your business area</label>
+                                    {% endif %}                                      
+                                    <textarea id="activite3" name="activite3" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                                  </div>                      
+                              </div> 
+
+                              <div class="row">                                   
+                                    <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                                      <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                        {% if LANGUAGE_CODE == 'fr' %}
+                                          <label class="form-label" for="basic-url3">Votre site web ou page de réseau social actuel</label>
+                                        {% else %}
+                                          <label class="form-label" for="basic-url3">Your actual website or social network page</label>
+                                        {% endif %}      
+            
+                                        <input id="basic-url3" style="width:100%;" type="text" name="basic-url3" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                                      </div>                      
+                                    </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label class="form-label" for="besoin3">Précisez votre besoin</label>
+                                    {% else %}
+                                      <label class="form-label" for="besoin3">Specify your need</label>
+                                    {% endif %}
+                                    
+                                    <textarea id="besoin3" name="besoin3" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                                  </div>                      
+                              </div> 
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">
+                                    Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                                </small>
+        
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                    <input id="reset-form3" type="reset" style="display: none;" value="Reset">
+                                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                                    <p id="msgPasHre3"></p>
+                                </div>
+                              {% else %}
+                                <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">
+                                  We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                                </small>
+        
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input id="reset-form3" type="reset" style="display: none;" value="Reset">
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                    <p id="msgPasHre3"></p>
+                                </div>
+                              {% endif %}                
+                          </form>        
+                        </div>
+                      </div>
+                    </div>
+                  </div>        
+
+                  <script>
+                    $(document).on("submit", "#form3", function (e) {
+                      e.preventDefault();
+              
+                      if ($("#name3").val() == "") {
+                        $("#msgPasHre3").text(
+                          "Il faut renseigner le nom !"
+                        );
+                        $("#msgPasHre3").focus();
+                      } else {
+
+                        $.ajax({
+                          type: "POST",
+                          url: "requete1/",
+                          data: {
+                            nom: $("#name3").val(),
+                            email: $("#email3").val(),
+                            whatsapp: $("#whatsapp3").val(),
+                            facebook: $("#facebook3").val(),
+                            activite: $("#activite3").val(),
+                            siteweb : $("#basic-url3").val(),
+                            besoin: $("#besoin3").val(),
+                            objetreq : "Optimisation SEO de site web",
+                            csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                          },
+                          success: function (response) {
+                            $("#msgPasHre3").text(response);
+                            $("#reset-form3").click();
+                          },
+                          error: function () {
+                            $("#msgPasHre3").text("Attention. Il y a une erreur quelque part!");
+                            // $("#msgPasHre").focus();
+                          },
+                        });
+                      }
+                    });
+                  </script>
+              
+                <!-- Fin fenetre modal -->
+                  
+                <!-- Fin fenetre modal -->
+              
+                <!-- testimonial 3 -->
+                <!-- <div class=""></div> -->
+            </div>
+        </div>        
+
+    </section>
+
+   <section class="section mt-4" id="webapp">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 offset-lg-2 mx-auto">
+                  <div class="center-heading">
+                      {% if LANGUAGE_CODE == 'fr' %}
+                          <h2 class="mb-4 mt-4">Solutions de <em>E-Commerce</em> et <em>Sites Web Applicatifs </em>métier </h2>
+                          <p class="" style="text-align: justify;"></p>
+                          <p class="" style="text-align: justify; font-size:1.4em;">
+                            Les solutions de commerce électronique offrent aux entreprises un logiciel en ligne, de commerce électronique, 
+                            facile à utiliser qui leur permet d'ajouter et de supprimer des produits, de gérer les stocks, 
+                            de calculer les taxes, d'encaisser les paiements et de traiter les commandes en ligne. <br><br>
+                          
+                            Les solutions de commerce électronique incluent des plates-formes qui vous permettent de vendre des 
+                            produits en ligne facilement et efficacement. Il existe deux types de solutions de commerce électronique : 
+                            les logiciels en tant que service (SaaS) et les logiciels open source, qui sont soit gratuits, 
+                            soit disponibles moyennant un abonnement mensuel. <br><br>
+
+                            Par ailleurs, vous pouvez décider de garder la main sur tous les processus techniques en faisant développer 
+                              pour vous mêmes, un site de ecommerce propres à vous. Pour ce faire, Mobilesoft'n a développer un moteur de ecommerce
+                              adaptables aux réalités des pays où les méthodes de paiement par carte bancaire ne sont pas possibles.
+                          </p>
+
+                        <h3 class="mb-4 mt-4">Les produits disponibles et adaptables à vos besoins </h3>
+
+                        <p class="" style="font-size:1.4em;text-align: justify;">
+                            Voici quelques applications Web totalement adaptables disponibles :
+                        </p>
+
+                        <h4 class="mb-4 mt-4">I. Web App de gestion des hôpitaux et cliniques</h4>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=afe31552b905ecf68dd5278f052b2cbd-5235791-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+
+                        <ol type="1" style="list-style-type: space-counter;font-size:1.4em;">
+                            <li>1. Présentation</li>
+                            <li>2. Gestion de l'accueil et de l'ordre des réceptions par le médecin</li>
+                            <li>3. Sondage des patients sur des thèmes relatifs à la qualité des soins</li>
+                            <li>4. Indexation et numérisation des dossiers des patients</li>
+                            <li>5. Blog médical</li>
+                            <li>6. Gestion des stocks de médicaments et de petits matériels jetables</li>
+                            <li>7. Facturation en ligne</li>
+                            <li>8. Facturation des tiers payants</li>
+                            <li>9. Caisse en ligne</li>
+                        </ol>
+
+                        <h4 class="mb-4 mt-4">II. Web App de gestion des pharmacies</h4>
+                        
+                        <!-- <img class="mb-4 mt-4" src="{% static 'images/pharmacy.jpg' %}" alt="" style="width:100%;"> -->
+                        <div class="text-center">
+                          <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=0880905b279fe5d2b279c113bd5364ba-5886906-images-thumbs&n=13" alt="" style="width:70%;">
+                        </div>
+
+                        <ol type="1" style="list-style-type: space-counter;font-size:1.4em;">
+                            <li>1. Présentation</li>
+                            <li>2. Gestion des achats et commandes
+                            <li>3. Gestion des ventes                            
+                            <li>4. Gestion des stocks de médicaments</li>
+                            <li>5. Facturation en ligne</li>
+                            <li>6. Facturation des tiers payants</li>
+                            <li>7. Caisse pharmacie en ligne</li>
+                            <li>8. Suivie des inventaires en ligne</li>
+                        </ol>
+
+
+                        <h4 class="mb-4 mt-4">III. Boutiques de e-commerce en ligne</h4>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=3007d3489982b2e7b5bb594587b2e09e-3793502-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+
+                        <ul type="1" style="font-size:1.4em;">
+                            <li>1. Présentation</li>
+                            <li>2. Gestion des commandes
+                            <li>3. Gestion des ventes                            
+                            <li>4. Gestion des stocks de produits</li>                        
+                            <li>5. Facturation</li>
+                            <li>6. Paiement à la livraison par mobile money</li>
+                            <li>8. Sondage des clients sur la qualité des produits et du service</li>
+                        </ul>
+
+                        <h5 class="mb-4 mt-4">Bénéfices de la gestion des stocks en ligne couplée à la boutique en ligne</h5>
+                        
+                        <ul style="font-size:1.4em;">
+                            <li>
+                              <div>a) anticiper les commandes,</div>
+                            </li>
+                            <li>
+                              <div>b) éviter les ruptures de stock et les surstocks,</div>
+                            </li>
+                            <li>
+                              <div>c) mieux maîtriser les coûts liés à la gestion des stocks,</div>
+                            </li>
+                            <li>
+                              <div>d) suivre l’évolution des stocks plus rapidement et plus facilement,</div>
+                            </li>
+                            <li>
+                              <div>e) prévoir des opérations promotionnelles en fonction des stocks disponibles,</div>
+                            </li>
+                            <li>
+                              <div>f) maîtriser les délais d’approvisionnement,</div>
+                            </li>
+                            <li>
+                              <div>g) définir des niveaux d’alerte en dessous desquels une commande est passée automatiquement chez le fournisseur, etc.</div>
+                            </li>
+                        </ul>
+
+                        <h3 class="mb-4 mt-4">IV. Plusieurs autres web applications métiers</h3>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=c3cb41b9dc8c56137bfc00b8b12ea909-5695679-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+
+                        <p class="" style="font-size:1.4em;text-align: justify;">
+                            Nous disposons d'applications et mobile dans plusieurs autres secteurs économiques comme l'hotellerie, la restauration, le transport, etc.                            
+                            Pour davantage d'informations, veuillez nous <a href="https://wa.me/2250103262662">contacter.</a> 
+                        </p>
+
+                        <div style="height:50px;"></div>
+                        <div class="text-center">
+                          <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">JE SUIS INTERESSÉ, CONTACTEZ MOI.</a>
+                        </div>
+                        <div style="height:50px;"></div>
+
+                        <h3 class="mb-4 mt-4">V. Les produits d'optimisation du marketing sur les réseaux sociaux </h3>
+
+                        <p class="" style="text-align: justify;font-size:1.4em;">MOBILESOFT'N accompagne les entrepreneurs du monde dans leur mutation numérique en exploitant au mieux le <span style="font-weight: bold;"> <a href="https://www.lebigdata.fr/marketing-data-driven-definition">Marketing Data Driven</a></span>.
+                            A l’ère de la digitalisation, des masses de données numériques sont accessibles. Nous vous aidons à les capter, à les analyser, et à les exploiter pour mieux orienter vos publicités, vos produits, en somme vos stratégies. 
+                            Cela demande bien souvent de se faire accompagner ou conseiller.              
+                        </p>
+                          
+                        <h4 class="mb-4 mt-4">Le commerce B2B est définitivement passé au digital. Et le B2C y était déjà depuis.</h4> 
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="{% static '/images/b2b.webp' %}" alt="" style="width:100%;">
+                        </div>
+
+                        <p class="" style="text-align: justify;font-size:1.4em;"> 
+                            Il faudra vous adapter faute de quoi vous risquez de voir mourir votre business parce que inadapté aux changements et handicapé face aux concurrents. <br><br>
+                            Selon McKinsey, 90% des organisations B2B ont évolué vers la digitalisation de leurs processus de vente en 2020, et plus de la moitié d’entre elles en perçoivent les bénéfices. <br><br> 
+                            Les changements imposés aux pratiques habituelles ont révélé d’énormes avantages pour les entreprises. <br><br>
+                            Alors que nous nous adaptons tous à la réalité que nos habitudes doivent changer dans un avenir proche, les commerciaux cherchent des outils qui encouragent les clients à se rendre  en ligne tout en conservant une relation  personnelle avec eux.  Pour y parvenir, 
+                            il faut digitaliser les processus de vente en faisant une symbiose stratégique entre les pages des réseaux sociaux, l'application mobile et le site internet.
+                        </p>
+                        <h5 class="mb-4 mt-4"><span>Nous nous proposons de le faire pour vous, ce seront des outils</span> esthétiques, dynamiques, réactifs et responsives!</h5>          
+                      
+                      {% else %}
+                          <h2 class="mb-4 mt-4"><em>E-Commerce</em> Solutions and <em>Applications website </em>for professions</h2>
+                          <p class="" style="text-align: justify;"></p>
+                          <p class="" style="text-align: justify; font-size:1.4em;">
+                              E-commerce solutions provide businesses with online, e-commerce software,
+                              easy to use that allows them to add and remove products, manage inventory,
+                              calculate taxes, collect payments and process online orders. <br><br>
+                            
+                              E-commerce solutions include platforms that allow you to sell
+                              products online easily and efficiently. There are two types of e-commerce solutions:
+                              software as a service (SaaS) and open source software, which are either free,
+                              or available for a monthly subscription. <br><br>
+
+                              In addition, you can decide to keep control of all the technical processes by developing
+                                for yourselves, an ecommerce site specific to you. To do this, Mobilesoft'n has developed an e-commerce engine
+                                adaptable to the realities of countries where credit card payment methods are not possible.                          
+                          </p>
+
+                        <h3 class="mb-4 mt-4">Products available and customizable</h3>
+
+                        <p class="" style="font-size:1.4em;text-align: justify;">
+                            Here are some fully customizable web applications available:
+                        </p>
+
+                        <h4 class="mb-4 mt-4">I. Web App for managing hospitals and clinics</h4>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=afe31552b905ecf68dd5278f052b2cbd-5235791-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+                        
+
+                        <ol type="1" style="list-style-type: space-counter;font-size:1.4em;">
+                          <li>1. Presentation</li>
+                          <li>2. Management of the reception and the order of receptions by the doctor</li>
+                          <li>3. Patient survey on quality of care topics</li>
+                          <li>4. Indexing and digitization of patient records</li>
+                          <li>5. Medical Blog</li>
+                          <li>6. Management of stocks of drugs and small disposable materials</li>
+                          <li>7. Online invoicing</li>
+                          <li>8. Invoicing of third-party payers</li>
+                          <li>9. Online Checkout</li>                        
+                        </ol>
+
+                        <h4 class="mb-4 mt-4">II. Pharmacy Management Web App</h4>
+                        
+                        <!-- <img class="mb-4 mt-4" src="{% static 'images/pharmacy.jpg' %}" alt="" style="width:100%;"> -->
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=0880905b279fe5d2b279c113bd5364ba-5886906-images-thumbs&n=13" alt="" style="width:70%;">
+                        </div>
+
+                        <ol type="1" style="list-style-type: space-counter;font-size:1.4em;">
+                          <li>1. Presentation</li>
+                          <li>2. Purchasing and order management
+                          <li>3. Sales management
+                          <li>4. Drug inventory management</li>
+                          <li>5. Online invoicing</li>
+                          <li>6. Invoicing of third-party payers</li>
+                          <li>7. Online pharmacy cash desk</li>
+                          <li>8. Online inventory tracking</li>                        
+                        </ol>
+
+
+                        <h4 class="mb-4 mt-4">III. Online e-commerce stores</h4>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=3007d3489982b2e7b5bb594587b2e09e-3793502-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+
+                        <ul type="1" style="font-size:1.4em;">
+                          <li>1. Presentation</li>
+                          <li>2. Order management
+                          <li>3. Sales management
+                          <li>4. Product inventory management</li>
+                          <li>5. Billing</li>
+                          <li>6. Cash on delivery by mobile money</li>
+                          <li>8. Customer survey on product and service quality</li>                        
+                        </ul>
+
+                        <h5 class="mb-4 mt-4">Benefits of online inventory management coupled with the online store</h5>
+                        
+                        <ul style="font-size:1.4em;">
+                          <li>
+                            <div>a) anticipating orders,</div>
+                          </li>
+                          <li>
+                            <div>b) avoiding stock-outs and overstocks,</div>
+                          </li>
+                          <li>
+                            <div>c) better control costs related to inventory management,</div>
+                          </li>
+                          <li>
+                            <div>d) following the evolution of stocks more quickly and easily,</div>
+                          </li>
+                          <li>
+                            <div>e) promotional operations planning depending on available stocks,</div>
+                          </li>
+                          <li>
+                            <div>f) controlling supply lead times,</div>
+                          </li>
+                          <li>
+                            <div>g) defining alert levels below which an order is automatically placed with the supplier, etc.</div>
+                          </li>                        
+                        </ul>
+
+                        <h3 class="mb-4 mt-4">IV. Several other businesses web applications</h3>
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="https://avatars.mds.yandex.net/i?id=c3cb41b9dc8c56137bfc00b8b12ea909-5695679-images-thumbs&n=13" alt="" style="width:100%;">
+                        </div>
+
+                        <p class="" style="font-size:1.4em;text-align: justify;">
+                          We have web applications and mobiles apps in several other economic sectors such as hotels, restaurants, transport, etc.
+                          For more information, please <a href="https://wa.me/2250103262662">contact us.</a> 
+                        </p>
+
+                        <div style="height:50px;"></div>
+                        <div class="text-center">
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalEcomm">I'M INTERESTED IN WEB APPS.</a>
+                        </div>
+                        <div style="height:50px;"></div>
+
+
+                        <h3 class="mb-4 mt-4">V. Social media marketing optimization products </h3>
+
+                        <p class="" style="text-align: justify;font-size:1.4em;">MOBILESOFT'N supports entrepreneurs around the world in their digital transformation by making the most of the <span style="font-weight: bold;"> <a href="https://www.lebigdata.fr/marketing-data-driven -definition">Marketing Data Driven</a></span>.
+                          In the era of digitalization, masses of digital data are accessible. We help you capture them, analyze them, and use them to better orient your advertising, your products, in short, your strategies.
+                          This often requires support or advice.      
+                        </p>
+                          
+                        <h4 class="mb-4 mt-4">B2B commerce has definitely gone digital. And B2C had already been there ever since.</h4> 
+
+                        <div class="text-center">
+                            <img class="mb-4 mt-4" src="{% static '/images/b2b.webp' %}" alt="" style="width:100%;">
+                        </div>
+
+                        <p class="" style="text-align: justify;font-size:1.4em;"> 
+                          You will have to adapt, otherwise you risk seeing your business die because it is unsuited to change and handicapped in front of competitors. <br><br>
+                          According to McKinsey, 90% of B2B organizations have moved towards digitizing their sales processes in 2020, and more than half of them are seeing the benefits. <br><br>
+                          The changes imposed on businesses have revealed huge benefits for them. <br><br>
+                          As we all adjust to the reality that our habits must change in the near future, sales reps are looking for tools that encourage customers to come online while maintaining a personal relationship with them. To achieve this,
+                          the sales process must be digitized by creating a strategic symbiosis between the social network pages, the mobile application and the website.</p>
+                          <h5 class="mb-4 mt-4"><span>We propose to do it for you, they will be aesthetic, dynamic, reactive and responsive tools!</span></h5>          
+                      {% endif %}
+                  </div>
+
+                    {% if LANGUAGE_CODE == 'fr' %}
+                        <div style="height:30px;"></div>
+
+                        <div class="text-center">
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">JE VEUX AMELIORER MON MARKETING DIGITAL</a>
+                        </div>
+                    {% else %}
+                        <div style="height:30px;"></div>
+
+                        <div class="text-center">
+                            <a href="#" class="main-button-slider mb-5" role="button" data-toggle="modal" data-target="#exampleModalDigitalMarket">HELP ME TO BOOST MY WEB MARKETING STRATEGY</a>
+                        </div>
+                    {% endif %}
+                  
+                  </div>
+              </div>
+  
+              <!-- Fenetre modal applications Web-->
+
+              <div class="modal fade" id="exampleModalEcomm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        {% if LANGUAGE_CODE == 'fr' %}
+                            <h5 class="modal-title text-center" id="exampleModalLabel">Offres : Proposition de solutions de e-commerce</h5>                  
+                        {% else %}
+                            <h5 class="modal-title text-center" id="exampleModalLabel">Proposal of e-commerce solutions</h5>                  
+                        {% endif %}
+  
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form4" method ="POST" action="">
+                          <div class="row">
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">Toutes 
+                                      vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                      Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                                  </small>
+                              {% else %}
+                                  <p class="ml-3 mr-2 mb-2">Please fill in the information below first:</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">All
+                                    your data will remain strictly confidential and will not be distributed without your permission.
+                                    They will only allow us to get in touch with you and to better adapt our offer to your situation!
+                                  </small>
+                              {% endif %}
+      
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="name4">Nom/Raison sociale </label>
+                                </div>
+                              {% else %}
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="name4">Name/Designation </label>
+                                </div>
+                              {% endif %}
+
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="name4" name="name4" placeholder="Votre nom ou raison sociale..">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="email4">Votre email</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="email" id="email4" name="email4" placeholder="Email..">
+                              </div>
+                            </div> 
+      
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="whatsapp4">WhatsApp/Tél.</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="whatsapp4" name="whatsapp4" placeholder="WhatsApp..">
+                              </div>
+                            </div> 
+
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="facebook4">Facebook</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="facebook4" name="facebook4" placeholder="Facebook..">
+                              </div>
+                            </div> 
+                            
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <div class="col-25 w-25 ml-3 mr-2">
+                                    <label class="form-label" for="activite4">Votre activité</label>
+                                  </div>
+                                {% else %}
+                                  <div class="col-25 w-25 ml-3 mr-2">
+                                    <label class="form-label" for="activite4">Your business area</label>
+                                  </div>
+                                {% endif %}                                    
+                                  <textarea id="activite4" name="activite4" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <div class="row">                                 
+                                  <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                                    <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                      {% if LANGUAGE_CODE == 'fr' %}
+                                        <label class="form-label" for="basic-url4">Votre site web ou page de réseau social actuel</label>
+                                      {% else %}
+                                        <label class="form-label" for="basic-url4">Your actual website or social network page</label>
+                                      {% endif %}      
+          
+                                      <input id="basic-url4" style="width:100%;" type="text" name="basic-url4" class="form-control" placeholder="Votre site web ou page facebook actuel..">                           
+                                    </div>                      
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <label class="form-label" for="besoin4">Précisez votre besoin</label>
+                                {% else %}
+                                  <label class="form-label" for="besoin4">Specify your need</label>
+                                {% endif %}                                    
+                                  
+                                  <textarea id="besoin4" name="besoin4" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                              {% else %}
+                                  We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                              {% endif %}                                    
+                            </small>
+  
+                          <div class="modal-footer">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                <input id="reset-form4" type="reset" style="display: none;" value="Reset">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <p id="msgPasHre4"></p>
+                              {% else %}
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input id="reset-form4" type="reset" style="display: none;" value="Reset">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                                <p id="msgPasHre4"></p>
+                              {% endif %}                                    
+                          </div>                    
+                        </form>        
+                      </div>
+                    </div>
+                  </div>
+              </div>        
+      
+              <script>
+                $(document).on("submit", "#form4", function (e) {
+                  e.preventDefault();
+          
+                  if ($("#name4").val() == "") {
+                    $("#msgPasHre4").text(
+                      "Il faut renseigner le nom !"
+                    );
+                    $("#msgPasHre4").focus();
+                  } else {
+
+                    $.ajax({
+                      type: "POST",
+                      url: "requete1/",
+                      data: {
+                        nom: $("#name4").val(),
+                        email: $("#email4").val(),
+                        whatsapp: $("#whatsapp4").val(),
+                        facebook: $("#facebook4").val(),
+                        activite: $("#activite4").val(),
+                        siteweb : $("#basic-url4").val(),
+                        besoin: $("#besoin4").val(),
+                        objetreq : "Solution de e-commerce et applications Web",
+                        csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                      },
+                      success: function (response) {
+                        $("#msgPasHre4").text(response);
+                        $("#reset-form4").click();
+                      },
+                      error: function () {
+                        $("#msgPasHre4").text("Attention. Il y a une erreur quelque part!");
+                        // $("#msgPasHre").focus();
+                      },
+                    });
+                  }
+                });
+              </script>
+              <!-- Fin fenetre modal applications Web--> 
+              
+              <!-- Fenetre modal applications mobile-->
+
+              <div class="modal fade" id="exampleModalDigitalMarket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDigit" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        {% if LANGUAGE_CODE == 'fr' %}
+                            <h5 class="modal-title text-center" id="exampleModalLabelDigit">Besoin de booster mon marketing digital</h5>                  
+                        {% else %}
+                            <h5 class="modal-title text-center" id="exampleModalLabelDigit">I need to boost my digital marketing strategy</h5>                  
+                        {% endif %}
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form44" method ="POST" action="">
+                          <div class="row">
+
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  <p class="ml-3 mr-2 mb-2">Renseigner d'abord les informations ci dessous svp :</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">Toutes 
+                                      vos données resteront strictement confidentielles et ne feront l'objet d'aucune diffusion sans votre autorisation. 
+                                      Elles nous permettront seulement d'entrer en contact avec vous et de mieux adapter notre offre à votre situation!
+                                  </small>
+                              {% else %}
+                                  <p class="ml-3 mr-2 mb-2">Please fill in the information below first:</p>
+                                  <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">All
+                                    your data will remain strictly confidential and will not be distributed without your permission.
+                                    They will only allow us to get in touch with you and to better adapt our offer to your situation!
+                                  </small>
+                              {% endif %}
+      
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="name44">Nom/Raison sociale </label>
+                                </div>
+                              {% else %}
+                                <div class="col-25 w-25 ml-3 mr-2">
+                                  <label for="name44">Name/Designation </label>
+                                </div>
+                              {% endif %}
+
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="name44" name="name44" placeholder="Votre nom ou raison sociale..">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="email44">Votre email</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="email" id="email44" name="email44" placeholder="Email..">
+                              </div>
+                            </div> 
+      
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="whatsapp44">WhatsApp/Tél.</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="whatsapp44" name="whatsapp44" placeholder="WhatsApp..">
+                              </div>
+                            </div> 
+
+                            <div class="row">
+                              <div class="col-25 w-25 ml-3 mr-2">
+                                <label for="facebook44">Facebook</label>
+                              </div>
+                              <div class="col-75">
+                                <input style="width:100%;" type="text" id="facebook44" name="facebook44" placeholder="Facebook..">
+                              </div>
+                            </div> 
+                            
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <div class="col-25 w-25 ml-3 mr-2">
+                                    <label class="form-label" for="activite44">Votre activité</label>
+                                  </div>
+                                {% else %}
+                                  <div class="col-25 w-25 ml-3 mr-2">
+                                    <label class="form-label" for="activite44">Your business area</label>
+                                  </div>
+                                {% endif %}                                    
+                                  <textarea id="activite44" name="activite44" class="form-control" rows="3" placeholder="Décrivez votre activité svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <div class="row">  
+                                  <div class="col-sm-12">
+                                    {% if LANGUAGE_CODE == 'fr' %}
+                                      <label for="basic-url">URL de votre site Internet ou votre page Facebook</label>
+                                    {% else %}
+                                      <label for="basic-url">URL of your website or your Facebook page</label>
+                                    {% endif %}                                    
+
+                                    </div>                                  
+                                  <div class="input-group w-100 mb-4 col-100 w-25 ml-3 mr-2">                                        
+                                      <div class="input-group-prepend col-100">
+                                          <span class="input-group-text" id="basic-addon44">https://example.com</span>
+                                      </div>
+                                      <input type="text" class="form-control" id="basic-url44" aria-describedby="basic-addon44">
+                                  </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="form-outline w-100 mb-4 col-100 w-25 ml-3 mr-2">
+                                {% if LANGUAGE_CODE == 'fr' %}
+                                  <label class="form-label" for="besoin44">Précisez votre besoin</label>
+                                {% else %}
+                                  <label class="form-label" for="besoin44">Specify your need</label>
+                                {% endif %}                                    
+                                  
+                                  <textarea id="besoin44" name="besoin44" class="form-control" rows="3" placeholder="Précisez votre besoin svp.."></textarea>                            
+                                </div>                      
+                            </div> 
+
+                            <small class="form-text text-danger ml-3 mr-3 mb-3" style="text-align: justify;font-size: 0.7em; font-style: italic;">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                  Nous prendrons contact avec vous dans un très bref délai soit par email ou soit par WhatsApp! Merci de nous faire confiance!
+                              {% else %}
+                                  We will contact you shortly either by email or WhatsApp! Thanks for trusting us!
+                              {% endif %}                                    
+                            </small>
+
+                          <div class="modal-footer">
+                              {% if LANGUAGE_CODE == 'fr' %}
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                <input id="reset-form44" type="reset" style="display: none;" value="Reset">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <p id="msgPasHre44"></p>
+                              {% else %}
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input id="reset-form44" type="reset" style="display: none;" value="Reset">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                                <p id="msgPasHre44"></p>
+                              {% endif %}                                    
+                          </div>                    
+                        </form>        
+                      </div>
+                    </div>
+                  </div>
+              </div>        
+      
+              <script>
+                $(document).on("submit", "#form44", function (e) {
+                  e.preventDefault();
+          
+                  if ($("#name44").val() == "") {
+                    $("#msgPasHre44").text(
+                      "Il faut renseigner le nom !"
+                    );
+                    $("#msgPasHre44").focus();
+                  } else {
+
+                    $.ajax({
+                      type: "POST",
+                      url: "requete1/",
+                      data: {
+                        nom: $("#name44").val(),
+                        email: $("#email44").val(),
+                        whatsapp: $("#whatsapp44").val(),
+                        facebook: $("#facebook44").val(),
+                        activite: $("#activite44").val(),
+                        siteweb : $("#basic-url44").val(),
+                        besoin: $("#besoin44").val(),
+                        objetreq : "J'ai besoin de booster ma stratégie de Marketing digital",
+                        csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+                      },
+                      success: function (response) {
+                        $("#msgPasHre44").text(response);
+                        $("#reset-form44").click();
+                      },
+                      error: function () {
+                        $("#msgPasHre44").text("Attention. Il y a une erreur quelque part!");
+                        // $("#msgPasHre").focus();
+                      },
+                    });
+                  }
+                });
+              </script>
+              <!-- Fin fenetre modal applications Web-->                
+            
+          </div>
+      </div>
+
+    </section>
+
+<!-- Nos compétences -->
+
+<div style="height:60px;"></div>
+
+<section class="section" id="competences" style="background-image: url(/static/images/left-bg-decor.png);
+background-position: left; /* Center the image */
+background-repeat: no-repeat; 
+background-size: cover;/* Do not repeat the image */">
+<div class="container">
+  <div class="row">
+      <div class="col-lg-12 offset-lg-2 mx-auto">
+          <div class="center-heading">
+              {% if LANGUAGE_CODE == 'fr' %}
+                <h2 class="mb-4 mt-4">Nos <em>compétences</em></h2>
+                <p class="" style="text-align: justify;font-size:1.4em;">Nos compétences reposent sur la qualité de nos ressources humaines, 
+                  sur notre veille technologique et sur la transversalité de nos compétences. <br><br>
+                  <!-- Nous avons tissé également des partenariats technologiques avec des développeurs asiatiques et américains. -->
+                  Ce qui permet un lissage d'expérience et constitue également un levier puissant de la qualité de nos prestations.
+                </p>
+                 
+              <h3 class="mb-4 mt-4">La maîtrise du coeur du métier : Le développement d'applications WEB et mobiles</h3>
+  
+              <p class="" style="text-align: justify;font-size:1.4em;">
+                <!-- Nous nous appuyons sur des developpeurs chevronnés locaux et des developpeurs free lance asiatiques et américains. -->
+                Nos développeurs ont une moyenne de plus de 10 ans d'expérience dans le développement de solutions Web et mobile.            
+              </p> <br>
+  
+              <p class="" style="text-align: justify; font-size:1.4em;">
+                Nous utilisons les langages modernes tels que : <br><br>
+                <span class="text-primary" style="font-weight:bold;">* HTML, CSS, JAVASCRIPT, TYPESCRIPT, PHP, PYTHON, DART et JAVA</span> <br><br>
+    
+                Nous travaillons avec des frameworks modernes facilitant la rapidité du codage : <br><br>
+                <span class="text-primary" style="font-weight:bold;">* BOOTSTRAP, JQUERY, DRUPAL, REACT, DJANGO, FLUTTER</span> <br><br>
+    
+                <img src="{% static 'images/pythonflutter.png' %}" alt="" class="mb-4" style="width:100%;">                                    
+  
+                Nous mettons nos compétences à la disposition des jeunes générations à travers une école digitale en ligne offrant
+                des <span class="text-primary" style="font-weight:bold;">SEMINAIRES DE FORMATION PAR VISIOCONFERENCE ET DES STAGES PRATIQUES</span> pour tous ceux qui sont désireux d'apprendre 
+                à développer à partir de zéro ou pour des starts-up désireuses d'acquérir des connaissances en marketing, en e-commerce,
+                en management, etc.  
+              </p> <br>
+  
+              <h3 class="mb-4 mt-4">Nos méthodologies</h3>
+              <p class="" style="text-align: justify;font-size:1.4em;">
+                Pour intégrer efficacement toutes les contraintes modernes du developpement des applications informatiques, nous faisons 
+                le choix d'appliquer autant que faire se peut les principes des méthodologies <a href="https://fr.wikipedia.org/wiki/Manifeste_agile">AGILE</a> 
+                et <a href="https://fr.wikipedia.org/wiki/Devops#">DEVOPS</a>.<br><br>
+  
+  
+              </p>
+  
+  
+              <h3 class="mb-4 mt-4">La force du marketing digital</h3>
+              <p class="" style="text-align: justify;font-size:1.4em;">
+                Nous avons tissé une toile de spécialistes du marketing digital, capable de surveiller et maintenir  
+                la reputation de votre marque sur le web à travers des stratégies de référencement, des suggestions de 
+                contenus, des stratégies publicitaires sur tous les canaux adaptés à votre marché et de penser pour vous
+                des stratégies de vente en ligne.
+              </p>
+  
+                <img src="{% static 'images/digitalmarketing.webp' %}" alt="" class="mb-4 mt-3" style="width:100%;">
+    
+                <h3 class="mb-4 mt-4">L'innovation et la créativité des visuels</h3>
+            
+                <p class="" style="text-align: justify;font-size:1.4em;">
+                    Qu'il s'agisse de concevoir les visuels de votre entreprises ou les vidéos publicitaires ou institutionnelles,
+                    nous avons toute la panoplie des expertises depuis les infographes en passant par les videos-monteur, les scénaristes, les développeurs front-end et back-end,
+                    les acteurs et les experts de la communication publicitaire.
+                </p>
+    
+              {% else %}
+                  <h2 class="mb-4 mt-4">Our <em>skills</em></h2>
+
+                  <p class="" style="text-align: justify;font-size:1.4em;">Our skills are based on the quality of our human resources,
+                    on our technology research and on the transversality of our skills. <br><br>
+                    <!-- We have also forged technological partnerships with Asian and American developers. -->
+                    This allows a smoothing of experience and also constitutes a powerful lever for the quality of our services.
+                  </p>
+                  
+                <h3 class="mb-4 mt-4">Mastery of the core business: Web sites and mobile applications development</h3>
+    
+                <p class="" style="text-align: justify;font-size:1.4em;">
+                  <!-- Nous nous appuyons sur des developpeurs chevronnés locaux et des developpeurs free lance asiatiques et américains. -->
+                  Our developers have an average of more than 10 years of experience in developing web and mobile solutions.
+                </p> <br>
+    
+                <p class="" style="text-align: justify; font-size:1.4em;">
+                  We use modern languages such as : <br><br>
+                  <span class="text-primary" style="font-weight:bold;">* HTML, CSS, JAVASCRIPT, TYPESCRIPT, PHP, PYTHON, DART et JAVA</span> <br><br>
+      
+                  We work with modern frameworks facilitating speed of coding : <br><br>
+                  <span class="text-primary" style="font-weight:bold;">* BOOTSTRAP, JQUERY, DRUPAL, REACT, DJANGO, FLUTTER</span> <br><br>
+      
+                  <img src="{% static 'images/pythonflutter.png' %}" alt="" class="mb-4" style="width:100%;">                                    
+    
+                   We make our skills available to younger generations through an online digital school offering
+                   <span class="text-primary" style="font-weight:bold;">VIDEO CONFERENCING TRAINING SEMINARS AND PRACTICAL COURSES</span> for anyone eager to learn
+                   to be able to develop from scratch or for start-ups wishing to acquire knowledge in marketing, e-commerce,
+                   in management, etc.
+                </p> <br>
+    
+                <h3 class="mb-4 mt-4">Our methodologies</h3>
+                <p class="" style="text-align: justify;font-size:1.4em;">
+                  To effectively integrate all the modern constraints of the development of computer applications, we make
+                   the choice to apply as far as possible the principles of the methodologies <a href="https://fr.wikipedia.org/wiki/Manifeste_agile">AGILE</a> 
+                  and <a href="https://fr.wikipedia.org/wiki/Devops#">DEVOPS</a>.<br><br>
+    
+    
+                </p>
+    
+    
+                <h3 class="mb-4 mt-4">The power of digital marketing</h3>
+                <p class="" style="text-align: justify;font-size:1.4em;">
+                  We have woven a web of digital marketers who can monitor and maintain
+                   the reputation of your brand on the web through SEO strategies, suggestions for
+                   content, advertising strategies on all channels adapted to your market and thinking for you
+                   online sales strategies.
+                </p>
+    
+                <img src="{% static 'images/digitalmarketing.webp' %}" alt="" class="mb-4 mt-3" style="width:100%;">
+    
+                <h3 class="mb-4 mt-4">Innovation and creativity of designs</h3>
+            
+                <p class="" style="text-align: justify;font-size:1.4em;">
+                  Whether it's designing your company's visuals or advertising or institutional videos,
+                  we have the full range of expertise from computer graphics to video editors, screenwriters, front-end and back-end developers,
+                  actors and experts in advertising communication.
+                </p>  
+              {% endif %}
+
+          </div>
+      </div>
+      
+<!-- testimonial 3 -->
+
+    </div>
+</div>        
+
+</section>
+
+{% endblock %}
